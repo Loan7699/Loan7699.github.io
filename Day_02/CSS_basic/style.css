@@ -1,0 +1,34 @@
+h2 {
+    color: red;
+    background-color: black;
+    color: blue;
+    /* có 2 thuộc tính trùng nhau, CSS lấy thuộc tính cuối */
+}
+/* chọn phần tử tag, h1, h2.. */
+h3 {
+    color: green 
+    /* sử dụng thuộc tính !important để ưu tiên external */
+}
+/* chọn phần tử id, #+tên id */
+#heading {
+    color: blue;
+}
+/* chọn phần tử class, .+tên class */
+.heading {
+    color: red;
+}
+h3#heading.heading {
+    color: salmon;
+}
+body h3#heading.heading {
+    color: violet;
+}
+.heading {
+    font-size: initial;
+}
+.headingheading1 {
+    color:gray;
+}
+.headingheading2 {
+    color: gold;
+}

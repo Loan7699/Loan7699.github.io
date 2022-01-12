@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form+Table</title>
+    <style>
+      table,
+      tr,
+      td,
+      th {
+        border: 1px solid black;
+      }
+    </style>
+    <style>
+      table {
+        width: 520px; height: 514px; font-size: 20px;
+      }
+    </style>
+    <style>
+      input {
+        font-size: 18px;
+    </style>
+  </head>
+  <body>
+    <table
+      <tr>
+        <th colspan="2">ĐĂNG KÝ</th>
+      </tr>
+      <tr>
+        <form>
+          <td>
+            <label>Full name</label>
+          </td>
+          <td>
+            <input type="text" placeholder="Nhập fullname" style="width: 85%; height: 60%;"/>
+          </td>
+        </form>
+      </tr>
+      <tr>
+        <form>
+            <td>
+              <label>User name</label>
+            </td>
+            <td>
+              <input type="text" placeholder="Nhập tên" style="width: 85%;" />
+            </td>
+          </form>
+      </tr>
+
+      <tr>
+        <form>
+            <td>
+              <label>Password</label>
+            </td>
+            <td>
+              <input type="password" placeholder="Nhập mật khẩu" style="width: 85%;" />
+            </td>
+          </form>
+      </tr>
+
+      <tr>
+        <form>
+            <td>
+              <label>Nhập lại Password</label>
+            </td>
+            <td>
+              <input type="password" placeholder="Nhập lại mật khẩu" id="pass" style="width: 85%;"/>
+            </td>
+          </form>
+      </tr>
+
+      <tr>
+        <form>
+            <td>
+              <label>Giới tính</label>
+            </td>
+            <td>
+              <input type="radio" name="Gender" id="Nam"/>
+              <label for="Nam">Nam</label>
+              <input type="radio" name="Gender" id="Nữ"/>
+              <label for="Nữ">Nữ</label>
+            </td>
+          </form>
+      </tr>
+
+      <tr>
+        <form>
+            <td>
+              <label>Ngày sinh</label>
+            </td>
+            <td>
+              <select>
+                <option>Ngày 1</option>
+                <option>Ngày 2</option>
+                <option>Ngày 3</option>
+              </select>
+              <select>
+                <option>Tháng 1</option>
+                <option>Tháng 2</option>
+                <option>Tháng 2</option>
+              </select>
+              <select>
+                <option>Năm 2010</option>
+                <option>Năm 2011</option>
+                <option>Năm 2012</option>
+              </select>
+            </td>
+          </form>
+      </tr>
+
+      <tr>
+        <form>
+            <td>
+              <label>Địa chỉ</label>
+            </td>
+            <td>
+              <textarea></textarea>
+            </td>
+          </form>
+      </tr>
+
+      <tr>
+        <form>
+            <td>
+              <label>Avatar</label>
+            </td>
+            <td>
+              <input type="file">
+            </td>
+          </form>
+      </tr>
+
+      <tr>
+        <form>
+            <td>
+              <label>Sở thích</label>
+            </td>
+            <td>
+              <input type="checkbox" id="box1" name="box1" value="phim">
+              <label for="box1">Xem phim</label>
+              <input type="checkbox" id="box2" name="box2" value="thể thao">
+              <label for="box2">Thể thao</label>
+              <input type="checkbox" id="box3" name="box3" value="Web">
+              <label for="box3">Web</label>
+            </td>
+          </form>
+      </tr>
+
+      <tr>
+        <form>
+          <td colspan="2" style="text-align: center;">
+            <input type="reset">
+            <button style="height: 26px;" >OK</button>
+          </td>
+
+        </form>
+      </tr>
+
+    </table>
+  </body>
+</html>

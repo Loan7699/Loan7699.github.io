@@ -1,0 +1,39 @@
+body {
+    background-color: #464646;
+    text-align: center; 
+    /* căn lề */
+    font-family: Roboto,sans-serif;
+    /* loại font chữ */
+}
+h4 {
+    color: white; 
+    font-size: 18px; 
+    /* kích thước chữ */
+    font-weight: 500;
+    /* độ in đậm chữ */
+    margin-bottom: 0.5rem;
+    /* khoảng cách giữa dưới h4 với phần tử tiếp nó */
+    line-height: 1.2;
+
+}
+a, p {
+    color: #6c757d; 
+    font-size: 14px; 
+    line-height: 1.5em;
+    /* khoảng cách giữa 2 phần tử */
+  
+}
+a:link {
+    text-decoration: none;
+    /* xóa gạch chân link */
+}
+a:hover {
+    text-decoration: underline;
+}
+i {
+    font-size: 2em;
+    line-height: 1;
+    color: #919294;
+    padding-bottom: 30px;
+    /* khoảng cách từ phần tử cuối đến lề dưới của trang */
+}

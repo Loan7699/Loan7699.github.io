@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label>Enter name: </label>
+      <input type="text" placeholder="Nhập tên..." />
+      <!-- Nhập text, input , type=kiểu định dạng-->
+      <br />
+      <label>Enter password: </label>
+      <input type="password" placeholder=" Nhập password..." />
+      <!-- gợi ý ở ô nhập, placeholder="..." -->
+      <br />
+      <label>Enter email: </label>
+      <input type="email" placeholder="Nhập email..." />
+      <br />
+      <!-- Lựa chọn 1 trong hai -->
+      <label>Enter gender</label>
+      <input type="radio" name="gender" id="male" />
+      <!-- đặt id khác nhau ở 2 input -->
+      <!-- chọn 1 hoặc 2, sử dụng name=tên giống ở cả hai input -->
+      <label for="male"> Male</label>
+      <!-- sử dụng for để liên kết id và name -->
+      <input type="radio" name="gender" id="female" />
+      <label for="female">Female</label>
+
+      <br />
+
+      <label>Select country</label>
+      <!-- Lựa chọn options, select -->
+      <select>
+        <option>Việt Nam</option>
+        <option>Trung Quốc</option>
+        <option>India</option>
+        <option>American</option>
+      </select>
+      <br />
+      <!-- tạo ô ghi chú, textarea -->
+      <textarea placeholder="Ghi chú..."></textarea>
+      <br />
+      <!-- 2 cách tạo nút -->
+      <button>Submit</button>
+      <input type="Submit" value="Login" />
+    </form>
+  </body>
+</html>
