@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Roboto,sans-serif;
+    color: #464646;
+    font-size: 16px;
+    text-align: left;
+}
+.card {
+    background-color: #fff;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 15%);
+    width: 418px;
+    display: flex;
+    flex-direction: column;
+}
+.year,.time {
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+}
+.year {
+    background-color: #ef5321;
+    border-top-left-radius: 4px;
+    padding: 6px 6px;
+}
+.time {
+    background-color: #fe6d3f;
+}
+h1.day {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 0px;
+}
+.month {
+    font-size: 16px;
+    font-weight: 300;
+    margin-block-start: 0px;
+    margin-block-end: 48px;
+}
+.info {
+    font-size: 1.35rem;
+    padding: 16px 24px 0px 24px;
+}
+a {
+    color: #464646;
+}
+a:link {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.teacher {
+    padding: 0px 24px 16px 24px;
+}
+span, p {
+    display: inline;
+}
+.teacher + .day {
+    padding: 16px 24px 0px 24px;
+}
+.time-learn  {
+    padding: 16px 24px 0px 24px;
+}
+.location {
+    padding: 16px 24px 0px 24px;
+    border-bottom: 1px solid #464646;
+}
+.location p {
+    padding-bottom: 100px;
+}
+button {
+    padding: 16px 0 5px 24px;
+    color: #3c78e8;
+    font-weight: 300;
+    font-size: 16px;
+    border: hidden;
+    background-color: white;
+    text-align: left;
+}
