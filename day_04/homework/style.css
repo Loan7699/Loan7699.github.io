@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    font-family: Roboto,sans-serif;
+    background-color: #f4f7fa;
+    color: #464646;
+}
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.first, .second {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 24px 0px;
+    flex-wrap: wrap;
+
+}
+.card {
+    width: 305px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 15%);
+    border-radius: 4px;
+    overflow: hidden;
+}
+img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    object-fit: cover;
+}
+.content {
+    padding: 16px 24px;
+}
+.content a {
+    color: #464646;
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+a:link {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.course {
+    display: flex;
+    justify-content: space-between;
+    color: #757575;
+    font-size: 0.9rrem;
+}
+i {
+    color: yellow;
+}
+.course i {
+    color: yellow;
+    font-size: 1rem;
+}
+.price {
+    color: #f65623;
+    font-size: 1.2rem;
+}
+.footer {
+    background-color: #464646;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 36px;
+}
+.owner, .address, .contact, .intro {
+    flex-basis:  1;
+    margin-bottom: 36px;
+}
+h4 {
+    color: white; 
+    font-size: 18px; 
+    font-weight: 500;
+    margin-top: 36px;
+    
+}
+a, p {
+    color: #6c757d; 
+    font-size: 14px; 
+    padding: 12px 0px;
+}
+i {
+    font-size: 2em;
+    color: #919294;
+    padding-bottom: 30px;
+}
+.icon {
+    display: flex;
+    justify-content: space-around;
+}
+h2 {
+    margin: 24px 0px 0px 106px;
+}
+

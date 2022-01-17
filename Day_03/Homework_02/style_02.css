@@ -66,6 +66,7 @@ span, p {
 .location {
     padding: 16px 24px 0px 24px;
     border-bottom: 1px solid #464646;
+    border-left: 1px;
 }
 .location p {
     padding-bottom: 100px;

@@ -1,0 +1,49 @@
+
+.container {
+    background-color: bisque;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+    flex-wrap: nowrap;
+    align-content: center;
+    /* áp dụng theo hàng align content*/
+    /* align item, căn chỉnh theo hàng */
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    color: white;
+    font-size: 32px;
+    border: 2px solid black;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item4 {
+    order: 0;
+    flex-basis: 300px;
+    /* kích thước trục item flex_basis phụ thuộc vào trục main row or column */
+}
+.item2 {
+    order: 1;
+    /* flex-grow: 2; */
+    /* flex_grow, chiếm khoảng thừa còn lại */
+    flex-shrink: 3;
+
+}
+.item3 {
+    order: 2;
+    /* flex-grow: 1; */
+    align-self: ;
+   
+}
+.item1 {
+    order: 3;
+    flex-basis: 600px;
+    flex-shrink: 5;
+}
