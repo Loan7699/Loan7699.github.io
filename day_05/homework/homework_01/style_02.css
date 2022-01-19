@@ -1,0 +1,136 @@
+body {
+    font-size: 16px;
+    color: #464646;
+    font-family: Roboto,sans-serif;
+    background-color: #ddd;
+}
+img {
+    max-width: 100%;
+    display: block ;
+    margin: auto;
+    object-fit: cover;
+}
+.page {
+    display: flex;
+    justify-content: space-around;
+}
+.info {
+    flex-basis: 60%;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 15%);
+    background-color: #f4f7fa;
+    border-radius: 4px;
+    margin: 36px 36px;
+}
+.info h2, .info p {
+    margin: 24px 18px;
+}
+.info ul {
+    margin: 0px 36px;
+}
+.contact1, .date-time {
+    margin: 0px 50px;
+}
+.card {
+    flex-basis: 25%;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 15%);
+    background-color: #f4f7fa;
+    margin: 36px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.content01, .card-02 ul, .description, .card-03 {
+    margin: 0px 12px;
+    font-size: 0.9rem;
+}
+.card-01, .card-02, .card-03 {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 4px 0px;
+    border-radius: 4px;
+}
+.button {
+    margin-bottom: 24px;
+}
+.description {
+    margin-bottom: 24px;
+    margin-left: 36px;
+}
+.rate {
+    font-size: 3.2rem;
+    font-weight: 400;
+    margin-right: 5px;
+}
+.star {
+    color: #ffd600;
+}
+.exit-button {
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: bisque;
+    border: 1px solid bisque;
+    transition: 0.4s;
+    font-size: 1.5rem;
+    color: #464646 !important;
+    margin: 20px 20px 20px 0px;
+}
+a:link {
+    text-decoration: none;
+    color: #464646;
+}
+a:hover {
+    text-decoration: underline;
+}
+.course {
+    display: flex;
+    justify-content: space-between;
+    color: #757575;
+    font-size: 0.9rrem;
+}
+.course i {
+    color: yellow;
+    font-size: 1rem;
+}
+.price {
+    color: #f65623;
+    font-size: 1.2rem;
+}
+.footer {
+    background-color: #464646;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 36px;
+}
+.owner, .address, .contact, .intro {
+    flex-basis:  1;
+    margin-bottom: 36px;
+}
+h4 {
+    color: white; 
+    font-size: 18px; 
+    font-weight: 500;
+    margin-top: 36px;
+    
+}
+.footer a, .footer p {
+    color: #6c757d; 
+    font-size: 14px; 
+    padding: 6px 0px;
+}
+.footer i {
+    font-size: 2em;
+    color: #919294;
+    padding-bottom: 30px;
+}
+.icon {
+    display: flex;
+    justify-content: space-evenly;
+}
+.title {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.card-02 img {
+    border-radius: 50%;
+    overflow: hidden;
+}

@@ -4,16 +4,123 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Danh sách khóa học</title>
-    <link rel="stylesheet" href="./style.css" />
-    <script
-      src="https://kit.fontawesome.com/3830c03740.js"
+    <title>TechMasterVN</title>
+
+    <!-- google font Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- link icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
       crossorigin="anonymous"
-    ></script>
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="card-container">
+    <div class="header">
+      <div class="logo">
+        <img
+          src="https://techmaster.vn/resources/image/logo-techmaster/white/white_200x74.png"
+          alt="logo"
+        />
+      </div>
+
+      <div class="side-bar">
+        <div class="menu">
+          <ul>
+            <li>
+              Lộ trình <span><i class="fas fa-caret-down"></i></span>
+              <ul class="sub-menu">
+                <li>Font End + React</li>
+                <li>Java Spring Boot FullStack</li>
+                <li>Lộ trình IOS</li>
+                <li>Di động React Native</li>
+                <li>Lộ trình DevOps</li>
+                <li>Code game</li>
+                <li>Wordpress</li>
+              </ul>
+            </li>
+            <li>
+              Doanh nghiệp
+            </li>
+            <li>Khóa học <span><i class="fas fa-caret-down"></i></span>
+            <ul class="sub-menu">
+              <li>Phòng lab</li>
+              <li>Trực tuyến</li>
+            </ul>
+            </li>
+            <li>Sản phẩm học viên</li>
+            <li>Khai giảng</li>
+            <li>Blog</li>
+            <li>Trải nghiệm</li>
+            <li>Việc làm</li>
+            <li>
+              Chúng tôi <span><i class="fas fa-caret-down"></i></span>
+              <ul class="sub-menu">
+                <li>Trung tâm</li>
+                <li>Quy định chung</li>
+                <li>Giảng viên</li>
+                <li>Hướng dẫn đăng ký học</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="cart">
+          <span class="icon"> <i class="fas fa-shopping-cart"></i> </span>
+          <span class="cart-number">0</span>
+        </div>
+        <div class="avatar">
+          <img
+            src="https://techmaster.vn/resources/image/anonymous-user.jpg"
+            alt="avatar"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="body_container">
+      <div class="filter_container">
+        <p class="topic">Chủ đề</p>
+        <p>
+          <input type="radio" name="topic" id="topic_01" />
+          <label for="topic_01">Big Data, AI</label>
+        </p>
+        <p>
+          <input type="radio" name="topic" id="topic_02" />
+          <label for="topic_02">Di động</label>
+        </p>
+        <p>
+          <input type="radio" name="topic" id="topic_03" />
+          <label for="topic_03">Java</label>
+        </p>
+        <p>
+          <input type="radio" name="topic" id="topic_04" />
+          <label for="topic_04">Khóa học căn bản</label>
+        </p>
+        <p>
+          <input type="radio" name="topic" id="topic_05" />
+          <label for="topic_05">Spring Boot </label>
+        </p>
+        <p>
+          <input type="radio" name="topic" id="topic_05" />
+          <label for="topic_05">Spring Boot </label>
+        </p>
+        <p>
+          <input type="radio" name="topic" id="topic_07" />
+          <label for="topic_07">Web frontend</label>
+        </p>
+      </div>
+
+      <div class="card-container">
         <div class="card">
           <div class="img">
             <img
@@ -22,7 +129,9 @@
             />
           </div>
           <div class="content">
-            <a href="./index_01.html" target="_blank">Lập trình di động đa nền tảng React Native cập nhật 2021</a>
+            <a href="./index_01.html" target="_blank"
+              >Lập trình di động đa nền tảng React Native cập nhật 2021</a
+            >
             <div class="course">
               <p>Phòng lab, 14 buổi</p>
               <p>4,7 <i class="fas fa-star"></i></p>
@@ -30,7 +139,7 @@
             <p class="price">3,900,000đ</p>
           </div>
         </div>
-  
+
         <div class="card">
           <div class="img">
             <img
@@ -62,7 +171,7 @@
             </div>
             <p class="price">4,500,000đ</p>
           </div>
-        </div>  
+        </div>
         <div class="card">
           <div class="img">
             <img
@@ -71,7 +180,9 @@
             />
           </div>
           <div class="content">
-            <a href="./index_04.html" target="_blank">Lập trình Web - API - Microservice bằng Golang</a>
+            <a href="./index_04.html" target="_blank"
+              >Lập trình Web - API - Microservice bằng Golang</a
+            >
             <div class="course">
               <p>Phòng lab, 28 buổi</p>
               <p>4 <i class="fas fa-star"></i></p>
@@ -79,7 +190,7 @@
             <p class="price">5,600,000đ</p>
           </div>
         </div>
-  
+
         <div class="card">
           <div class="img">
             <img
@@ -88,7 +199,9 @@
             />
           </div>
           <div class="content">
-            <a href="./index_05.html" target="_blank">Web Frontend nâng cao với React</a>
+            <a href="./index_05.html" target="_blank"
+              >Web Frontend nâng cao với React</a
+            >
             <div class="course">
               <p>Phòng lab, 16 buổi</p>
               <p>4,6 <i class="fas fa-star"></i></p>
@@ -96,35 +209,41 @@
             <p class="price">4,800,000đ</p>
           </div>
         </div>
-  
+
         <div class="card">
-            <div class="img">
-              <img
-                src="https://techmaster.vn/media/static/9479/c3859vc51co20t4m4qq0"
-                alt="khóa học"
-              />
+          <div class="img">
+            <img
+              src="https://techmaster.vn/media/static/9479/c3859vc51co20t4m4qq0"
+              alt="khóa học"
+            />
+          </div>
+          <div class="content">
+            <a href="./index_06.html" target="_blank"
+              >Thiết Kế UI/UX cho phần mềm</a
+            >
+            <div class="course">
+              <p>Phòng lab, 8 buổi</p>
+              <p>4,8 <i class="fas fa-star"></i></p>
             </div>
-            <div class="content">
-              <a href="./index_06.html" target="_blank">Thiết Kế UI/UX cho phần mềm</a>
-              <div class="course">
-                <p>Phòng lab, 8 buổi</p>
-                <p>4,8 <i class="fas fa-star"></i></p>
-              </div>
-              <p class="price">3,000,000đ</p>
-            </div>
+            <p class="price">3,000,000đ</p>
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="footer">
       <div class="owner">
         <h4>Chủ sở hữu website</h4>
-        <p><a href="https://techmaster.vn/" target="_blank"
-          >Công ty TNHH TechMaster VietNam Ltd</a></p>
+        <p>
+          <a href="https://techmaster.vn/" target="_blank"
+            >Công ty TNHH TechMaster VietNam Ltd</a
+          >
+        </p>
         <p>Số ĐKDN: 0105392153</p>
         <p>Ngày cấp: 4-7-2011</p>
         <p>Nơi cấp: Sở kế hoạch-đầu tư Hà nội</p>
         <p>Người đại diện pháp luật: Lê Minh Thu</p>
-        <p>Phụ trách nội dung: Trịnh Minh Cường</p>  
+        <p>Phụ trách nội dung: Trịnh Minh Cường</p>
       </div>
 
       <div class="intro">
@@ -140,7 +259,9 @@
           >
         </p>
         <p>
-          <a href="https://techmaster.vn/trungtam/quy-dinh-chung" target="_blank"
+          <a
+            href="https://techmaster.vn/trungtam/quy-dinh-chung"
+            target="_blank"
             >Quy định</a
           >
         </p>
@@ -166,7 +287,7 @@
           >
         </p>
       </div>
-      
+
       <div class="contact">
         <h4>Tư vấn tuyển sinh</h4>
         <p>Tư vấn viên:</p>
@@ -179,7 +300,9 @@
           >
         </p>
         <p>
-          <a href="tel:0987273764" target="_blank">Dương Đức Thịnh-0987273764</a>
+          <a href="tel:0987273764" target="_blank"
+            >Dương Đức Thịnh-0987273764</a
+          >
         </p>
         <p>
           <a href="mailto:thinh@techmaster.vn" target="_blank"
@@ -192,9 +315,8 @@
           >
         </p>
         <p><a href="mailto:cuongtechmaster.vn">cuong@techmaster.vn</a></p>
-  
       </div>
-    
+
       <div class="address">
         <h4>Địa chỉ</h4>
         <p>
@@ -215,15 +337,14 @@
         </p>
         <div class="icon">
           <a href="https://www.facebook.com/techmastervn/?fref=ts"
-        ><i class="fab fa-facebook-square"></i
-      ></a>
-      <a href="https://www.youtube.com/user/TechMasterVN"
-        ><i class="fab fa-youtube-square"></i
-      ></a>
-      <a href="https://github.com/arrowjs"><i class="fab fa-github"></i></a>
+            ><i class="fab fa-facebook-square"></i
+          ></a>
+          <a href="https://www.youtube.com/user/TechMasterVN"
+            ><i class="fab fa-youtube-square"></i
+          ></a>
+          <a href="https://github.com/arrowjs"><i class="fab fa-github"></i></a>
         </div>
-    </div>
-  
+      </div>
     </div>
   </body>
 </html>

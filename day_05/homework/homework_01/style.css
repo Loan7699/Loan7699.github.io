@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto,sans-serif;
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    object-fit: cover;
+}
+
+.header {
+    background-color: #34465c;
+    box-shadow: 0 4px 4px 0 rgb(0 0 0 / 25%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    margin-bottom: 64px;
+}
+
+.logo {
+    width: 120px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.side-bar {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.menu > ul {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.menu > ul > li {
+    font-size: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-right: 32px;
+    /* >, bộ chọn con trực tiếp */
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* hoặc xét luôn height của li là 60px */
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0px 30px;
+}
+
+.sub-menu {
+    position: absolute;
+    width: 200px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+    right: 0;
+    display: none;
+    top: 100%;
+    /* chiều cao đúng bằng phần tử li */    
+}
+
+.menu > ul > li:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu li {
+    color: #464646!important;
+    cursor: pointer;
+    padding: 0.7rem 1rem;
+    text-align: center;
+    text-transform: none;
+    width: 100%;
+}
+
+.sub-menu li:hover {
+    background-color: #c4c4c4;
+    columns: #fff;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart .icon {
+    color: #fff;
+    font-size: 20px;
+}
+
+.cart-number {
+    position: absolute;
+    top: -12px;
+    right: -4px;
+    background-color: #26a69a;
+    color: #fff;
+    padding: 1px 2px;
+    border-radius: 4px;
+}
+
+.sidebar i {
+    color: #fff;
+}
+
+.body_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.filter_container {
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    padding: 0px 0px 0px 64px;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex: 7;
+}
+
+.card img {
+    display: block;
+    margin: auto;
+    object-fit: cover;
+    height: 280px;
+    width: 100%;
+}
+
+.card {
+    box-shadow: 0 2px 4px rgb(0 0 0 / 15%);
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 0px 0px 64px 0px;
+    width: 26%;
+}
+
+.content {
+    padding: 16px 24px;
+}
+
+.content a {
+    color: #464646;
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+.course {
+    display: flex;
+    justify-content: space-between;
+    color: #757575;
+    font-size: 0.9rrem;
+}
+
+.card i {
+    color: #ffd600;
+}
+.course i {
+    color: yellow;
+    font-size: 1rem;
+}
+.price {
+    color: #f65623;
+    font-size: 1.2rem;
+}
+.footer {
+    background-color: #464646;
+    display: flex;
+    justify-content: space-around;
+}
+.owner, .address, .contact, .intro {
+    flex-basis:  1;
+    margin-bottom: 36px;
+}
+h4 {
+    color: white; 
+    font-size: 18px; 
+    font-weight: 500;
+    margin-top: 36px;
+    
+}
+a, p  {
+    color: #6c757d; 
+    font-size: 14px; 
+    padding: 12px 0px;
+}
+
+.filter_container p {
+    font-size: 1.1rem;
+}
+
+.footer i {
+    font-size: 2em;
+    color: #919294;
+    padding-bottom: 30px;
+}
+.address .icon {
+    display: flex;
+    justify-content: space-around;
+}
