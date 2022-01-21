@@ -1,0 +1,73 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* để card ra giữa viewport */
+}
+
+/* card img style */
+img {
+     max-width: 100%;
+     display: block;
+     margin: auto;
+     /* căn 1 đối tượng block ra giữa, margin auto; */
+ }
+
+ .card {
+    border: 1px solid #464646;
+    border-radius: 5px; 
+    box-shadow: 2px 4px 12px #464646;
+    width: 300px;
+    overflow: hidden;
+    
+    /* ảnh không full card */
+    position: relative;
+    height:500px;
+
+    display: flex;
+    align-items: flex-end;
+    /* đưa content xuống cuối card; */
+    padding: 20px;
+ }
+
+
+.card-img  {
+     position: absolute;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+ }
+
+ .card-img img {
+     height: 100%;
+     /* ảnh full chiều cao card */
+     object-fit: cover;
+     /* ảnh về trạng thái ban đầu  */
+     transition: all 1s 
+ }
+
+ .card-content  {
+     position: relative;
+     z-index: 2;
+     color: #fff;
+     transform: translateY(150px);
+     transition: all 1s;
+
+ }
+
+ .card:hover .card-img img {
+     transform: scale(1.2);
+ }
+
+ .card:hover .card-content {
+     transform: translateY(0) ;
+ }

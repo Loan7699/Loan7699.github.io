@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.btn {
+    display: inline-block;
+    padding: 30px 100px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    cursor: pointer;
+    /* thay đổi biểu tượng thành bàn tay */
+
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+
+}
+
+.btn::before {
+    content: "";
+    /* ko muốn xh nội dung */
+    position: absolute;
+    top: 0;
+    left:-100%;
+    width: 100%;
+    height: 100%;
+    background-color: brown;
+    transition: all 0.3s;
+
+    z-index: -1;
+}
+
+.btn:hover::before {
+    left: 0;
+
+}

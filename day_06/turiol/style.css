@@ -1,0 +1,36 @@
+.box {
+    width: 200px;
+
+    background-color: black;
+
+    /* transition-property: width;
+    transition-duration: 1s; */
+
+    /* transition: all 1s; */
+    /* all, tất cả các thuộc tính diễn ra trong 1s */
+
+    /* transition: width 1s, height 2s; */
+
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.box:hover {
+    box-shadow: 4px 4px 20px black ;
+   /* transform: translateY(40px) rotate(45deg); */
+   /* dịch chuyển theo chiều y, quay 45 độ */
+   /* height: 400px; */
+   /* width: 400px; */
+}
+
+.box p {
+    color: #fff;
+    transform: translateY(250px);
+    transition: all 1s ease-out;
+}
+
+
+.box:hover p {
+    transform: translateY(0px);
+}
