@@ -1,0 +1,122 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: black;
+    width: 600px;
+    height: 400px;
+    position: relative;
+}
+
+.icon {
+    color: #fff;
+    position: ;
+    top: -100px;
+    position: absolute;
+}
+
+.icon-1 {
+    padding: 50px;
+    animation: icon1 10s infinite;
+    
+}
+
+.icon-2 {
+    padding: 50px;
+    animation: icon1 11s infinite;
+    
+}
+
+.icon-3 {
+    padding: 50px;
+    animation: icon1 12s infinite;
+  
+}
+
+@keyframes icon1 {
+
+    0% {
+        top: 50px;
+        right: 100px;
+    }
+
+    25% {
+        top: 100px;
+        right: 110px;
+    }
+
+    50% {
+        top: 200px;
+        right: 100px;
+    }
+
+    75% {
+        top:350px;
+        right: 90px;
+    }
+
+    100% {
+        top: 400px;
+        right: 0px;
+    }
+}
+
+@keyframes icon2 {
+
+    0% {
+        top: 50px;
+        right: 60px;
+    }
+
+    25% {
+        top: 100px;
+        right: 70px;
+    }
+
+    50% {
+        top: 200px;
+        right: 80px;
+    }
+
+    75% {
+        top:350px;
+        right: 60px;
+    }
+
+    100% {
+        top: 400px;
+        right: 0px;
+    }
+}
+
+@keyframes icon3 {
+
+    0% {
+        top: 50px;
+        right: 80px;
+    }
+
+    25% {
+        top: 100px;
+        right: 60px;
+    }
+
+    50% {
+        top: 200px;
+        right: 70px;
+    }
+
+    75% {
+        top:350px;
+        right: 80px;
+    }
+
+    100% {
+        top: 400px;
+        right: 90px;
+    }
+}

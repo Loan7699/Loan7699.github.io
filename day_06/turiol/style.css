@@ -28,6 +28,10 @@
     color: #fff;
     transform: translateY(250px);
     transition: all 1s ease-out;
+    /* transition-property: all;
+    transition-duration: ;
+    transition-timing-function: ;
+    transition-delay: ; */
 }
 
 

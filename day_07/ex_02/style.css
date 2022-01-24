@@ -1,0 +1,48 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+    transform: rotate(45deg);
+}
+
+.rec {
+  background-color: red;
+  width: 100px;
+  height: 150px;
+  border-radius: 100px 100px 0px 0px;
+  transform: rotate(45deg);
+
+  animation: icon 2s infinite;
+  position: relative;
+}
+
+.rec::before {
+  content: "";
+  position: absolute;
+  background-color: red;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px 100px 0px 0px;
+  transform: rotate(-90deg);
+  top: 32px;
+  left: -26px;
+
+}
+
+@keyframes icon {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

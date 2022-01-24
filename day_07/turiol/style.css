@@ -1,0 +1,40 @@
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+
+    /* animation-name: animation;
+    /* tên */
+    /* animation-duration: 3s; */
+    /* thời gian diễn ra  */
+    /* tên, thời gian bắt buộc */
+    /* animation-iteration-count: infinite; */
+    /* số lần thực hiện chu trình animation */
+    /* animation-delay: 2s; */
+    /* thời gian dừng trước khi diễn ra animation */
+    /* animation-direction: reverse; */ 
+    
+    animation: animation 3s 2s infinite reverse;
+}
+
+/* quá trình diễn ra , luôn có 0% và 100% */
+@keyframes animation {
+    0% {
+        transform: translateX(0);
+    }
+
+    33% {
+        transform: translateX(200px);
+        background-color: burlywood;
+    }
+
+    66% {
+        transform: translateX(400px);
+        background-color: black;
+    }
+
+    100% {
+        transform: translateX(0);
+        background-color: brown;
+    }
+}

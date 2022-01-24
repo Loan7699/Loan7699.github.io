@@ -1,0 +1,26 @@
+:root {
+    --color-heading: red;
+    --color-text: green;
+    --width: 100px;
+    --height: 100px;
+}
+
+
+h1 {
+    color: var(--color-heading);
+}
+
+p {
+    color: var(--color-text);
+}
+
+.box {
+    width: calc(5 * var(--width));
+    height: calc(3 * var(--height));
+    background-color: yellowgreen;
+}
+
+.box p {
+    --color-text: pink;
+    color: var(--color-text);
+}
