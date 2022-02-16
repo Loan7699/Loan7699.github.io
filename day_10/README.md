@@ -41,7 +41,7 @@ functionName(para_01,...,para_n)
    console.log(sum(3,4)) // neu muon in luon ra ket qua
    ```
    **Note**: *nhung cau lenh dang sau return se khong duoc thuc thi*
-   4. Function không trả về kết quả
+   4. Function khong tra ve ket qua
    Đối với function không có từ khóa return thì coi như function đó không trả về kết quả
 
 ## Default Parameter ES6 (gia tri mac dinh cua tham so)
@@ -82,7 +82,7 @@ console.log(sum(2,3));// => num1=2, num2=3 => 5
     }
     console.log(name) // Lỗi
     ```
-**Note**: *Nếu 1 biến không có từ khóa khai báo biến, sẽ trở thành bien global*
+**Note**: *Nếu 1 bien khong co tu khoa khai bao bien, se tro thanh bien global*
 ```js
 function sayHello() {
     number = 10;
@@ -112,11 +112,11 @@ let c = 10;
 console.log(Boolean(b > c)); // false
 ```
 + Truthy & Falsy value
-Truthy value là những giá trị mà khi ép kiểu về Boolean thì sẽ cho ra giá trị là true.
-Ngược lại, Falsy value là những giá trị mà khi ép kiểu về Boolean thì cho ra giá trị là false
+Truthy value la nhung gia tri ma khi ep kieu về Boolean thi se cho ra gia tri la true.
+Nguoc lại, Falsy value la nhung gia tri ma khi ep kieu ve Boolean thi cho ra gia tri la false
 **Note:**
-*Có 6 giá trị sau được coi là falsy : false, 0, NaN, ‘’, null, undefined*
-*Các giá trị còn lại, ngoài các giá trị trên được gọi là truthy*
+*Co 6 gia tri sau duoc coi là falsy : false, 0, NaN, ‘’, null, undefined*
+*Cac gia tri con lai, ngoai cac gia tri tren duoc goi la truthy*
 ```js
 console.log(Boolean(false)); // false
 
@@ -132,14 +132,13 @@ console.log(Boolean(undefined)); // false
 ```
 ## Cau lenh dieu kien if-else
 + Cau lenh **if**
-Cú pháp
+Cu phap:
 ```js
 if (điều kiện) {
     // Code được thực thi nếu điều kiện đúng
 }
 ```
-
-Ví dụ:
+Vi du:
 ```js
 let hour = 6;
 if (hour < 10) {
@@ -148,15 +147,15 @@ if (hour < 10) {
 ```
 + Cau lenh **if-else**
 Neu dieu kien dung thuc hien cau lenh trong **if**, nguoc lai thuc hien lenh trong **else**
-Cú pháp
+Cu phap
 ```js
-if (điều kiện) {
-    // Code được thực thi nếu điều kiện đúng
+if (dieu kien) {
+    // Code đuoc thuc thi neu dieu kien 1 dung
 } else {
-    // Code được thực thi nếu điều kiện sai
+    // Code đuoc thuc thi neu dieu kien 1 sai
 }
 ```
-Ví dụ
+Vi du:
 ```js
 let hour = 6;
 if (hour < 12) {
@@ -167,17 +166,17 @@ if (hour < 12) {
 ```
 + Cau lenh **if-else if-else**
 chuyen sang dieu kien moi neu dieu kien tren sai
-Cú pháp
+Cu phap:
 ```js
-if (điều kiện 1) {
-    // Code được thực thi nếu điều kiện 1 đúng
-} else if (điều kiện 2) {
-    // Code được thực thi nếu điều kiện 1 sai và điều kiện 2 đúng
+if (dieu kien 1) {
+    // Code đuoc thuc thi neu dieu kien 1 dung
+} else if (dieu kien 2) {
+    // Code duoc thuc thi neu dieu kienn 1 sai và dieu kien 2 dung
 } else {
-    // Code được thực thi nếu điều kiện 1 và 2 sai
+    // Code duoc thuc thi neu dieu kien 1 và 2 sai
 }
 ```
-Ví dụ
+Vi du:
 ```js
 let hour = 6;
 if (hour < 12) {
@@ -198,10 +197,10 @@ Cu phap:
 ```js
 condition ? true_value : false_value;
 ```
-Trong đó:
-condition : Biểu thức điều kiện
-true_value : Được trả về nếu điều kiện đúng
-false_value : Được trả về nếu điều kiện sai
+Trong đo:
+condition : Bieu thuc dieu kien
+true_value : duoc tra ve neu dieu kien dung
+false_value : duoc tra ve neu dieu kien sai
 neu dieu kien dung thuc hien lenh sau **?**, dieu kien sai thuc hien lenh sau:
 Vi du:
 ```js
