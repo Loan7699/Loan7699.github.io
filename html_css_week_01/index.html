@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>nicepage</title>
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -65,8 +73,10 @@
               <h1>ONLINE TRAINING PROGRAMS</h1>
               <p class="source_img">
                 Image from
-                <a href="https://www.freepik.com/free-photos-vectors/mockup"
-                  >freepik
+                <a
+                  class="freepik"
+                  href="https://www.freepik.com/free-photos-vectors/mockup"
+                  >Freepik
                 </a>
               </p>
             </div>
@@ -155,11 +165,15 @@
             </p>
             <p class="source_img">
               Image from
-              <a href="https://www.freepik.com/free-photos-vectors/man"
+              <a
+                class="freepik"
+                href="https://www.freepik.com/free-photos-vectors/man"
                 >Freepik</a
               >
             </p>
-            <a class="more" href="./index.html">READ MORE</a>
+            <div class="more">
+              <a href="./index.html">READ MORE</a>
+            </div>
           </div>
 
           <div class="photo"></div>
@@ -167,21 +181,17 @@
       </div>
 
       <div class="content4">
-        <div class="container4">
-          <div class="text4">
-            <h6>NINA PERRY</h6>
-            <p>manager</p>
-            <h2>WHY US</h2>
-            <p>
-              Our consulting agency provides consulting, ideas, and resources
-              for people working to create social change. We bring the right
-              people together to challenge established thinking and drive
-              transformation. We work with our clients to build the capabilities
-              that enable organizations to achieve sustainable advantage.
-            </p>
-          </div>
-
-          <div class="photo"></div>
+        <div class="text4">
+          <h6>NINA PERRY</h6>
+          <p>manager</p>
+          <h2>WHY US</h2>
+          <p class="detail">
+            Our consulting agency provides consulting, ideas, and resources for
+            people working to create social change. We bring the right people
+            together to challenge established thinking and drive transformation.
+            We work with our clients to build the capabilities that enable
+            organizations to achieve sustainable advantage.
+          </p>
         </div>
       </div>
 
@@ -197,16 +207,18 @@
           </p>
           <p class="source_img">
             Image from
-            <a href="https://www.freepik.com/free-photos-vectors/man"
+            <a
+              class="freepik"
+              href="https://www.freepik.com/free-photos-vectors/man"
               >Freepik</a
             >
           </p>
-          <a class="more" href="./index.html">READ MORE</a>
+          <div class="more">
+            <a class="more" href="./index.html">READ MORE</a>
+          </div>
         </div>
 
-        <div class="img">
-          <img src="" alt="">
-        </div>
+        <div class="photo"></div>
       </div>
 
       <div class="content6">
@@ -249,34 +261,58 @@
         </div>
 
         <div class="info7">
-          <div class="text">
+          <div class="text7">
             <h2>DON'T BE SHY</h2>
-            <p>Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
-            <span></span>
-            <h6>Mail me
-              info@mail.com</h6>
-            <span></span>
-            <h6>Call me
-              +1 333 454 55 44</h6>
+            <p>
+              Feel free to get in touch with me. I am always open to discussing
+              new projects, creative ideas or opportunities to be part of your
+              visions.
+            </p>
+            <div class="contact">
+              <div class="icon">
+                <i class="fa-solid fa-envelope"></i>
+                <h6>Mail me info@mail.com</h6>
+              </div>
+
+              <div class="icon">
+                <i class="fa-solid fa-phone"></i>
+                <h6>
+                  Call me
+                  <br />
+                  +1 333 454 55 44
+                </h6>
+              </div>
+            </div>
           </div>
 
           <div class="submit">
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <button>Submit</button>
+            <input type="text" placeholder="Enter your name" />
+            <br />
+            <input type="text" placeholder="Enter a valid email address" />
+            <br />
+            <textarea placeholder="Enter your message"></textarea>
+            <br />
+            <div class="accept">
+              <label style="color: #ffffff; padding-left: 40px"
+                >I accept the Terms of Service</label
+              >
+              <input class="tick" type="checkbox" />
+              <br />
+            </div>
+            <div class="complete">
+              SUBMIT
+            </div>
           </div>
         </div>
       </div>
 
       <div class="footer">
-        <p>
+        <p style="padding: 49px 0px;">
           Sample text. Click to select the text box. Click again or double click
           to start editing the text.
         </p>
 
-        <div class="link">
+        <div class="link" style="padding: 16px;">
           <p>
             <span>
               <a href="https://nicepage.com/website-templates"
