@@ -1,0 +1,273 @@
+html {
+    font-size: 16px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", "Arial","sans-serif";
+    color: #111111;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    height: 70px;
+}
+
+.image {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.image img {
+    padding: 10px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between; 
+    background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/bf48ed0748c75a00aaa512bb/PA7BIF1x.jpg);
+    background-position: 50% 50%; 
+}
+
+.container-info {
+    margin-left: 88px;
+    display: flex;
+}
+
+.sub-info {
+    flex-basis: 50%;
+    padding: 20px 30px;
+}
+
+.info .photo {
+    display: block;
+    background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/d4ee61f59c695343b3666ee6/z-min.jpg);
+    background-position: 50% 50%;
+}
+
+.header1 {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 20;
+    align-items: center;
+}
+
+.header1 img {
+    height: 32px;
+}
+
+.header1 a {
+    padding: 10px 20px;
+    color: #999999;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.header1 a:hover {
+    color: #111111;
+}
+
+.info {
+    display: flex;
+}
+
+.sub-info h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #312933;
+}
+
+.sub-info h3 {
+    font-weight: 400;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    line-height: 36px;
+}
+
+.content2 {
+    margin: 0px 67px;
+}
+
+.content2 h2 {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1.1;
+    margin: 60px 77.5px 0px;
+    text-align: center;
+}
+
+.title1 p {
+    margin: 17px 25px 0px;
+    text-align: center;
+}
+
+.title2 {
+    display: flex;
+    margin: 20px 0px 60px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.reason {
+    padding: 30px;
+    flex-basis: 25%;
+}
+
+.reason h1 {
+    color: #f9e79b;
+    font-size: 15.625rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 0px 77.609px;
+}
+
+.reason h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: -213px auto 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.reason p {
+    margin: 40px 0px 70px;
+    text-align: center;
+}
+
+.content3 {
+    background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/a376d6d1490757eb8b0aa529/5ae9c49e-7cad-c9e5-2446-718a68ef0cdb.jpg
+    );
+}
+
+.container-content3 {
+    margin-left: 97px;
+    display: flex;
+
+}
+
+.content3 .photo {
+    background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/1b5890f34507521db4b625bc/3565087ff.jpg);
+}
+
+.content3 .text {
+    padding: 30px;
+    flex-basis: 50%;
+}
+
+.content3 h1 {
+    color: #f1c50e;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.content3 h5 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.content3 p {
+    margin-top: 36px;
+    font-size: 1.125rem;
+}
+
+.source_img {
+    color: #000000;
+    margin: 22px 27px 0px 0px;
+}
+
+.more {
+    margin: 36px 130px 0px 0px;
+    padding: 10px 51px;
+    background-color: #f1c50e;
+}
+
+.content4 {
+    background-image: url(https://images02.nicepage.com/a1389d7bc73adea1e1c1…33c94b317fb5366b354d730/pexels-photo-3906049.jpeg);
+}
+
+.container4 {
+    margin: 0px 97px;
+}
+
+.text4 {
+    padding: 30px;
+}
+
+.content5 {
+    display: flex;
+}
+
+.img {
+    background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/49c5cc4cfa7a576d8331768f/rfgd-min.jpg);
+}
+
+.content5 h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 30px;
+    line-height: 1.1;
+}
+
+.content5 p {
+    line-height: 1.8;
+    font-size: 1rem;
+    margin: 20px 0 0;
+}
+
+.content6 {
+    margin: 0px 97px;
+}
+
+.content6 h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 55px auto 0;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.content6 p {
+    margin: 20px 130px 0px;
+    text-align: center;
+}
+
+.logo {
+    margin-top: 26px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.content7 {
+    background-color: #000000;
+    padding: 0px 97px;
+    width: auto;
+}
+
+.title7 h1 {
+    font-size: 9.375rem;
+    font-weight: 900;
+    margin: 18px auto 0;
+    line-height: 1.1;
+    color: #404040
+}
+
+.title7 h2 {
+    font-weight: 900;
+    font-size: 3rem;
+    margin: -115px auto 0;
+    line-height: 1.1;
+    color: #f1c50e
+}
