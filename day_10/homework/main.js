@@ -94,7 +94,7 @@ year(2400)
 // Viết function truyền vào 2 giá trị, đại diện cho cân nặng và chiều cao. Tính chỉ số BMI tương ứng
 // Sử dụng return
 function bmi(M, H) {
-    let result = M/(H*2);
+    let result = M/(H**2);
     return result
 }
 console.log(bmi(43, 1.5))
