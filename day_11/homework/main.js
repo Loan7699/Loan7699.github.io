@@ -2,14 +2,16 @@ let value = "a";
 // Bài 1. Viết function truyền vào 1 chuỗi bất kỳ, hãy sao chép chuỗi đó lên 10 lần.
 // Ví dụ : repeatString(“a”) => Kết quả trả về là “aaaaaaaaaa”
 
+
 function repeatString_01(string) {
     for (i = 1; i <= 9; i++) {
         string = string + value;
     }
-    console.log(string);
     return string;
 }
-repeatString_01("a");
+let Bai_1 = repeatString_01("a");
+console.log(Bai_1);
+
 
 // Bài 2. Viết function truyền vào 1 chuỗi bất kỳ, hãy viết hàm có tác dụng sao chép đó chuỗi lên 10 lần, ngăn cách nhau bởi dấu gạch ngang.
 // Ví dụ: repeatString(“a”) => Kết quả trả về là “a-a-a-a-a-a-a-a-a-a”
@@ -17,21 +19,23 @@ function repeatString_02(string) {
     for (i = 1; i <= 9; i++) {
         string = string + "-" + value;
     }
-    console.log(string);
     return string;
 }
-repeatString_02("a");
+let Bai_2 = repeatString_02("a");
+console.log(Bai_2);
+
 
 // Bài 3. Viết function truyền vào 1 chuỗi bất kỳ và 1 số nguyên dương n > 1, hãy viết hàm có tác dụng sao chép đó chuỗi lên n lần, ngăn cách nhau bởi dấu gạch ngang.
 // Ví dụ: repeatString(‘a’, 5) => Kết quả trả về là ‘a-a-a-a-a’
 function repeatString_03(string, n) {
-    for (i = 1; i <= n; i++) {
+    for (i = 1; i < n; i++) {
         string = string + "-" + value;
     }
-    console.log(string);
     return string;
 }
-repeatString_03("a", 5);
+let Bai_3 = repeatString_03("a", 5);
+console.log(Bai_3);
+
 
 // Bài 4. Tính tổng các số chia hết cho 5 từ 0 -> 100
 let sum = 0;
@@ -42,13 +46,15 @@ for (i = 0; i <= 100; i++) {
 }
 console.log(sum);
 
+
 // Bài 5: Viết hàm tính thể tích hình cầu, với tham số truyền vào là bán kính của hình cầu.
 
 function calculateVolume(radius) {
     V = ((4 / 3) * Math.PI) * Math.pow(radius, 3);
-    console.log(V);
+    return V;
 }
-calculateVolume(5)
+let Bai_5 = calculateVolume(5)
+console.log(Bai_5);
 
 // Bài 6: Viết hàm truyền vào 2 số nguyên, tính tổng tất cả các số nguyên nằm giữa chúng. Ví dụ với tham số 3 và 8 ta có kết quả là 22 (bằng 4 + 5 + 6 + 7).
 // Note : Kết quả xuôi và ngược là như nhau
@@ -67,18 +73,16 @@ function calculateSum(a, b) {
             sum_01 = sum_01 + i;
         }
     }
-    console.log(sum_01);
+    return sum_01;
 }
-calculateSum(3, 8);
-calculateSum(8, 3);
-calculateSum(3,5)
+let Bai_6 = calculateSum(3, 8);
+console.log(Bai_6);
 
 // Bài 7: Cho 1 số, kiểm tra xem số đó có phải là số nguyên tố hay không, kết quả trả về true hoặc false.
 
 function soNguyenTo(n) {
     if (n < 2) {
-        console.log(false);
-        return 0;
+        return true;
     } else {
         let count = 0;
         for (i = 2; i <= Math.sqrt(n); i++) {
@@ -87,16 +91,14 @@ function soNguyenTo(n) {
             }
         }
         if (count == 0) {
-            console.log(true);
-            return 1;
+            return false;
         } else {
-            console.log(false);
-            return 0;
+            return false;
         }
     }
 }
-soNguyenTo(1);
-soNguyenTo(3);
+let Bai_7 = soNguyenTo(7);
+console.log(Bai_7);
 
 // Bài 8: Cho 1 số nguyên dương bất kỳ. Tính tổng tất cả các số nguyên tố mà nhỏ hơn hoặc bằng tham số truyền vào.
 function sumSoNguyenTo(n) {
@@ -112,11 +114,12 @@ function sumSoNguyenTo(n) {
             sum_02 = sum_02 + i;
         }
     }
-    console.log(sum_02);
+    return sum_02;
 }
 
-sumSoNguyenTo(12);
-sumSoNguyenTo(1);
+let Bai_8 = sumSoNguyenTo(12);
+console.log(Bai_8);
+
 
 // Bài 9: Cho 1 số nguyên dương, viết hàm tính tổng tất cả các ước số của số đó.
 function sumUoc(n) {
@@ -126,7 +129,7 @@ function sumUoc(n) {
             sum_03 = sum_03 + i
         }
     }
-    console.log(sum_03);
+    return sum_03;
 }
-sumUoc(1)
-sumUoc(12)
+let Bai_9 = sumUoc(5)
+console.log(Bai_9);
