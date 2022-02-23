@@ -11,6 +11,7 @@ console.log(myString.indexOf("JS, 6"));
 console.log(myString.slice(4, 6));
 // 4 là kí tự bđ, 6 là kết thúc
 console.log(myString.slice(4));
+console.log(myString.slice());
 console.log(myString.slice(-3, -1));
 // cắt từ phải sang
 

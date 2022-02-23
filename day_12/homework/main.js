@@ -14,6 +14,10 @@ function checkStringExist(first_string, second_string) {
 console.log(checkStringExist("i love you", "you"));
 console.log(checkStringExist('i love you', 'hate'));
 
+function checkStringExist_1(begin, check) {
+    return begin.includes(check);
+}
+
 // Bài 2. Viết function truyền vào 1 chuỗi, hãy rút ngắn chuỗi bằng cách cắt ra 8 ký tự đầu của 1 chuỗi và thêm dấu ba chấm ở cuối chuỗi. Nếu chuỗi có độ dài <= 8 ký tự thì giữ nguyên
 // Ví dụ:
 // shortenString(“Xin chào các bạn”) => “Xin chào…”
@@ -24,7 +28,7 @@ function shortenString(string_2) {
     if (new_string_2.length <=8 ) {
         return new_string_2;
     } else {
-        new_string_2 = new_string_2.substr(0, 7);
+        new_string_2 = new_string_2.substr(0, 8);
         new_string_2 += "..."
         return new_string_2;
     }
@@ -40,17 +44,27 @@ console.log(shortenString("hello"));
 
 function symetryString(string_3) {
     let new_string_3 = string_3;
-    new_string_3 = new_string_3.replace(/ /g, "");
+    // Remove khoảng trắng
+    // C1:new_string_3 = new_string_3.replace(/ /g, "");
+    // thay thế khoảng trắng
+    // c2: sử dụng replaceAll 
+    // C3: string = string.split(" ").join("")
+
+    new_string_3 = new_string_3.replaceAll(" ", "")
     new_string_3 = new_string_3.toLowerCase();
-    reveser_string = "";
-    for (i = new_string_3.length - 1; i >= 0; i--) {
-        reveser_string += new_string_3[i];
-    }
-    if (new_string_3 == reveser_string) {
-        return true;
-    } else {
-        return false;
-    }
+    let reveser_string = "";
+    // in thường chữ
+    // 
+    
+    // C2: tách thành mảng sau đó đảo ngược và join thành chuỗi
+    new_string_3 = new_string_3.split(" ").reverse().join("");
+    // so sánh chuỗi ban đầu và chuỗi đảo ngược
+    // if (new_string_3 == reveser_string) {
+    //     return true;
+    // } else {
+    //     return false;
+    // }
+    return new_string_3 == reveser_string;
 }
 console.log(symetryString('Race car'));
 console.log(symetryString('Hello word'));
@@ -65,13 +79,70 @@ function arrangeNumber(string_4) {
     let new_string_4 = string_4.split('');
     new_string_4.sort();
     if (new_string_4[0] == 0) {
-        new_string_4[0] = new_string_4[1];
-        new_string_4[1] = new_string_4 [0]; 
+        for (i = 1; new_string_4[i] == 0; i++){
+            new_string_4[0] = new_string_4[i]; 
+            console.log(new_string_4);
+        } 
     }
     let str = new_string_4.join('');
     return str;
 }
-console.log(arrangeNumber("53751"));
+console.log(arrangeNumber("50982"));
+console.log(arrangeNumber("203950"));
+
+function sortNumber(number) {
+    // b1: chuyển từ number=> mảng
+    let string_04 = number.toString()
+
+    // b2: chuyển từ chuỗi sang mảng
+    let arr = string_04.split("");
+
+    // b3: sắp xếp mảng
+    let arrSort = arr.sort();
+    
+    // b4: từ mảng về chuỗi
+    let stringConvert = arrSort.join("");
+
+    // b5: trường hợp 0
+    let res = ""
+    for ( let i = 0; i < stringConvert.length; i++) {
+        if (stringConvert[i] != 0) {
+            res = stringConvert[i] + stringConvert.slice(0,i) + stringConvert.slice(i+1)
+            break;
+        }
+    }
+    return Number(res); // convert chuỗi thành số
+}
+console.log(sortNumber(203950));
+
+function sortNumber_1(number_1) {
+    // b1: chuyển từ number=> mảng
+    let string_04 = number_1.toString()
+
+    // b2: chuyển từ chuỗi sang mảng
+    let arr = string_04.split("");
+
+    // b3: sắp xếp mảng
+    let arrSort = arr.sort();
+
+    for (let i = 0; i < arrSort.length; i++) {
+
+        if (arrSort[i] != 0) {
+            // sử dụng giá trị trung gian temp để đổi vị trí
+            let temp = arrSort[i];
+            arrSort[i] = arrSort [0];
+            arrSort[0] = temp;
+            break;
+        }
+    }
+    let stringConvert = arrSort.join("");
+    return Number(stringConvert);
+}
+console.log(sortNumber(156029));
+    
+
+
+
 
 // Bài 5: Viết function truyền vào 1 chuỗi bất kỳ gồm nhiều từ. Hãy chuyển chuỗi đó thành dạng snake_case và viết thường
 // Ví dụ:
@@ -82,6 +153,7 @@ function snakeCaseString(string_5) {
     new_string_5 = new_string_5.replace(/ /g, "_");
     new_string_5 = new_string_5.toLowerCase();
     return new_string_5;
+    // return string_5.replaceAll(" ", "_").toLowerCase()
 }
 console.log(snakeCaseString('HELLO world'));
 console.log(snakeCaseString('Xin Chào Các BẠN'));
