@@ -1,6 +1,6 @@
 // 1. To string(), join(), 
 // To string(): chuyen tu array sang string, ko chỉ định được dấu phân tách chuỗi
-var languages = [
+let languages = [
     'Javascript',
     'PHP',
     'Ruby',
@@ -80,6 +80,6 @@ console.log(fruits_1.lastIndexOf("Apple")); // 5
 
 console.log(fruits_1.lastIndexOf("Apple", 4)); // 3 do đếm từ vị trí 4 lên đầu chuỗi
 
-// 10. includes(): trả về true nếu mảng chứa giá trị chỉ định, ngược lại là true, phân biệt chữ in hoa và thường
+// 10. includes(): trả về true nếu mảng chứa giá trị chỉ định, ngược lại là false, phân biệt chữ in hoa và thường
 console.log(fruits.includes("Mango")); // true
 console.log(fruits.includes("Banana", 3)); // false vì tìm từ chỉ định 3 đến cuối chuỗi
