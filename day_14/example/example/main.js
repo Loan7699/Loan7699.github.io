@@ -68,7 +68,7 @@ function sum(a, b) {
     return a + b;
 }
 
-// 2. Tính chất 1: Gán function cho 1 biến - function expression
+// 2. Gán function cho 1 biến - function expression
 // Function không có tên = anonymous function
 let sumNumber = function (a, b) {
     return a + b;

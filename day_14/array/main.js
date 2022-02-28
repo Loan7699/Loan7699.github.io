@@ -41,14 +41,13 @@ function getElementGreater(arr, a) {
 console.log(getElementGreater([1,2,3,4,5], 3));
 console.log(getElementGreater([1,2,3,4,5], 5));
 
-// C2: fiter
-function getElementGreater_02)()
-let ages = [32, 33, 16, 40];
-const result = ages.filter(checkAdult);
-
-function checkAdult(age) {
-  return age >= 18;
+// C2: filter
+function getElementGreater_1(arr, a) {
+    let result = arr.filter(function(){
+        return arr > a;
+    })
 }
+console.log(getElementGreater([1,2,3,4,5], 3));
 
 // Bài 5: Viết function random 1 số nguyên trong khoảng min, max bất kì
 // randomNumber(3,10) => 4
@@ -70,7 +69,7 @@ function randomHexCode() {
 console.log(randomHexCode());
 
 // C2: 
-// Viết 1 fuunction random 1 giá trị trong mảng
+// Viết 1 function random 1 giá trị trong mảng
 function randomElement(arr) {
     let index = Math.floor(Math.random()*arr.length) // random chỉ số
     return arr[index]; // lấy giá trị dựa trên chỉ số

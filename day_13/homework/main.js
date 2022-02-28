@@ -12,6 +12,10 @@ function arrayMax(number) {
 console.log(arrayMax([1, 2, 9, 0]));
 console.log(arrayMax([11, 12, 15, 0]));
 
+function findMax_02(arr) {
+    return Math.max(...arr)
+}
+
 // Bài 2: Tìm số nhỏ nhất trong mảng
 function arrayMin(number) {
     let min = number[0];
