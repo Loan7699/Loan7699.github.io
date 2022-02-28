@@ -69,6 +69,7 @@ similarity([1, 2, 3], [1, 2, 4]) => [1,2]
 similarity([1, 2, 3], [3, 4, 5]) => [3]
 */
 const similarity = (arr1, arr2) => {
+    // trả về các phần tử của arr1 nằm trong arr2
     return arr1.filter(value => arr2.includes(value));
 }
 console.log(similarity([1, 2, 3], [1, 2, 4]));
@@ -124,14 +125,18 @@ let users = [
 
 // Viết function truyền vào 1 mảng các object user lấy ra những user có age > 25 và isStatus = true
 let findUser = param => {
+    // filter lọc các phần tử của mảng ban đầu với cùng 2 điều kiện
     return users.filter(user => (user.age > 25) && (user.isStatus == true) )
 }
 console.log(findUser(users));
 
 // Viết function truyền vào 1 mảng các object user. Hãy sắp xếp mảng users có age tăng dần
 let arrangeUser = param => {
+    // sử dụng map, sắp xếp mảng age tăng dần
     let arr_age = users.map(user => user.age).sort((a, b) => a - b);
+    // gán mảng mới bằng rỗng
     let new_user = [];
+    // sử dụng vòng lặp duyệt các phần tử theo mảng age để được mảng users sắp xếp tuổi tăng dần
     for (let i = 0; i < users.length; i++) {
         new_user = new_user.concat(users.filter(user => user.age == arr_age[i]));
     }
