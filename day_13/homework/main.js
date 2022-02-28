@@ -72,3 +72,23 @@ function repeatString_1(string) {
     return result.join('-');
 }
 console.log(repeatString_1('a'));
+let arr = [1,2,3,4,5]
+let res = arr.push(6)
+console.log(res);
+
+const o = {a:'one', b:'two', a:'three'}
+console.log(o);
+
+const value ='a';
+{
+    const value = 'b';
+    console.log(value);
+}
+console.log(value);
+
+const obj = {
+    1:1,
+    2:2,
+    3:3
+};
+console.log(Object.keys(obj),Object.values(obj));
