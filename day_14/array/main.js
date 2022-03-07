@@ -94,3 +94,11 @@ console.log(randomHexCode_1);
 // randomRgbCode() => rgb(213,43,133)
 // randomRgbCode() => rgb(12,32,122)
 
+function randomRgbCode(){
+    let res = [];
+    for(let i = 0; i < 3; i++){
+        res[i] = Math.floor(Math.random() * 256);
+    }
+    return `rgb(${res.toString()})`;
+}
+console.log(randomRgbCode());
