@@ -9,16 +9,18 @@ Nếu counter < 0 có màu red
 const btnMinus = document.querySelector('.prevBtn');
 const btnAdd = document.querySelector('.nextBtn');
 const h1 = document.getElementById('counter');
-let counter = Number(h1.innerText);
+let counter = Number(h1.innerText); // hoặc let count = 0;
 
 btnAdd.addEventListener('click', function() {
-    counter += 1;
-    h1.innerText = counter;
+    counter ++; // count++
+    h1.innerText = counter; // h1.innerText = count;
+    changeColor() // gọi hàm
 })
 
 btnMinus.addEventListener('click', function() {
-    counter -= 1;
+    counter --;
     h1.innerText = counter;
+    changeColor(); // gọi hàm
 })
 
 const changeColor = () => {
@@ -31,7 +33,7 @@ const changeColor = () => {
     }
 }
 
-btnAdd.addEventListener('click', changeColor);
+// btnAdd.addEventListener('click', changeColor);
 
 btnMinus.addEventListener('click', changeColor);
 
