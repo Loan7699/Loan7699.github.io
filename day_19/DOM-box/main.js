@@ -35,29 +35,28 @@ totalBox.classList.add('points');
 totalBox.innerText = boxArray.length;
 
 // 3. Khi bấm vào box bất kỳ thì box đó biến mất, đồng thời số lượng total box giảm đi 1
-let removeBox = () => {
-    for (let i = 0; i < boxArray.length; i++) {
-        boxArray[i].addEventListener('click', function() {
-            boxArray[i].style.display = 'none';
-            totalBox.innerText = Number(totalBox.innerText) - 1;
-        })
-    }
+
+for (let i = 0; i < boxArray.length; i++) {
+    boxArray[i].addEventListener('click', function () {
+        boxArray[i].style.display = 'none';
+        totalBox.innerText = Number(totalBox.innerText) - 1;
+    })
 }
 
 // 4. Khi click vào nút “more box” thì số lượng box tăng lên 5 (tương ứng với 5 màu trong mảng colors), đồng thời số lượng total box cũng tăng lên 5
 const btn = document.getElementById('btn');
 
-btn.addEventListener('click', function() {
+btn.addEventListener('click', function () {
     for (let i = 0; i < colors.length; i++) {
         const newBox = document.createElement('div');
         newBox.classList.add('box');
         newBox.style.backgroundColor = colors[i];
         boxes.insertAdjacentElement('beforeend', newBox);
-        removeBox();
+        newBox.addEventListener('click', function() {
+            newBox.style.display = 'none';
+            totalBox.innerText = Number(totalBox.innerText) - 1;
+        })
     }
+    
     totalBox.innerText = Number(totalBox.innerText) + 5;
 })
-
-
-
-// Sửa lỗi: chỉ bấm xóa đc 5 box đầu tiên

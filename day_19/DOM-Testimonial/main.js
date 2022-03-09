@@ -44,10 +44,16 @@ const name = document.querySelector('strong');
 
 for (let i = 0; i < users.length; i++) {
     authorImage[i].addEventListener('click', function () {
+
+        // xóa class selected khi click vào ảnh khác
+        const author = document.querySelector('.selected')
+        if (author) {
+            author.classList.remove('selected');
+        }
+
         container.style.backgroundColor = users[i].color;
         quote.innerText = users[i].quote;
         name.innerText = users[i].name;
         authorImage[i].classList.add('selected');
-        
     })
 }

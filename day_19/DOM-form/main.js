@@ -25,20 +25,32 @@ const inputUser = document.getElementById('username');
 const inputPass = document.getElementById('password');
 const inputConfirm = document.getElementById('confirmPassword')
 
-btnRegister.addEventListener('click', function() {
-    if (inputPass.value == inputConfirm.value && inputPass.value != '' && inputConfirm.value != '') {
-        alert("Password trùng nhau");
+
+// btnRegister.addEventListener('click', function () {
+// if ( pass == confirm &&  pass != '' && confirm != '') {
+//     alert("Password trùng nhau");
+// }
+inputUser.addEventListener('change', function () {
+    let user = inputUser.value;
+    console.log(user);
+    if (!user) {
+        btnRegister.setAttribute(disabled)
     }
 })
 
+let pass = inputPass.value
+console.log(pass);
+let confirm = inputConfirm.value;
+
+// if (user == '' || pass == '' || confirm == '') {
+//     btnRegister.removeAttribute('disabled')
+// } else {
+//     btnRegister.setAttribute(disabled)
+// }
+
+
 // // 3. Đảm bảo nút ‘Đăng ký’ bị disable cho đến khi người dùng nhập dữ liệu hợp lệ vào tất cả các trường đầu vào.
-if (inputUser.value != '' &&  inputPass.value == inputConfirm.value) {
-        // btnRegister.disabled = true;
-        console.log(inputPass.value, inputConfirm.value, inputUser.value);
-} else {
-        // btnRegister.disabled = false;
-        console.log(inputPass.value, inputConfirm.value, inputUser.value);
-    }
+
 
 // 4. Sau khi nhập đầy đủ thì ‘Đăng ký’ được enable.
 // Khi user nhập đủ thông tin hợp lệ và bấm vào nút submit thì tạo 1 hộp thoại thông báo đăng ký thành công
