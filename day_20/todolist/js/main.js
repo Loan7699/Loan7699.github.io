@@ -199,27 +199,30 @@ btnAdd.addEventListener('click', function () {
 // C3: sử dụng ô input ban đầu, nội dung input là cv muốn sửa tạo thêm 1 nút sửa trong html, khi ấn nút xanh nút sửa hiện, thêm ẩn. sau khi sửa nút thêm hiện, sửa ẩn ( sử dụng thêm class hide hoặc display: none)
 
 function updateTodo(id) {
+
+    // hiện nút sửa, ẩn nút thêm khi bấm btnupdate1
     btnupdate2.classList.remove('hide');
     btnAdd.classList.add('hide');
+
     for (let i = 0; i < todos.length; i++) {
         if (todos[i].id == id) {
-            console.log(id);
-            console.log(todos[i].id);
+            // gán nội dung ô input bằng title của phần tử mảng chọn
             inputEl.value = todos[i].title;
 
+            // bấm btn sửa, gán tiêu đề = nội dung mới của input
             btnupdate2.addEventListener('click', function () {
-                let t = inputEl.value;
-                todos[i].title = t;
+                todos[i].title = inputEl.value;
     
                 renderTodo(todos);
 
+                // ẩn nút sửa, hiện nút thêm
                 btnupdate2.classList.add('hide');
                 btnAdd.classList.remove('hide');
             })
         }
     }
 
-    // title cập nhật mới liên tục qua value của input
+    // !! title cập nhật mới liên tục qua value của input
     renderTodo(todos);
 }
 
