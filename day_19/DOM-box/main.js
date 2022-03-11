@@ -1,14 +1,9 @@
-// 1. Render số box = số lượng màu ra ngoài màn hình bằng javascript (5 box)
+d; // 1. Render số box = số lượng màu ra ngoài màn hình bằng javascript (5 box)
 // Box được tạo bởi thẻ div, có class=“box”, background tương ứng với từng mã màu
-let colors = [
-    '#3498db',
-    '#9b59b6',
-    '#e74c3c',
-    '#2c3e50',
-    '#d35400',
-]
+let colors = ["#3498db", "#9b59b6", "#e74c3c", "#2c3e50", "#d35400"];
 
 // truy cập các phần tử
+/* 
 const boxes = document.querySelector('.boxes');
 const boxArray = document.getElementsByClassName('box');
 const score = document.getElementById('score');
@@ -60,3 +55,58 @@ btn.addEventListener('click', function () {
     
     totalBox.innerText = Number(totalBox.innerText) + 5;
 })
+*/
+// copy giá trị mảng ra 1 mảng mới
+let colorsCopy = [...colors];
+// Chữa bài
+const boxesEl = document.querySelector(".boxes");
+const pointsEl = document.querySelector(".points");
+const btn = document.querySelector("#btn");
+
+// Render box
+function renderBox(arr) {
+    // xóa hết dữ liệu trước khi render
+  boxesEl.innerHTML = "";
+
+  let html = "";
+  
+  for (let i = 0; i < arr.length; i++) {
+    html += `<div 
+        class='box 
+        style='background-color:${arr[i]}'
+        onclick='deleteBox('${i})'
+        ></div>`;
+  }
+  boxesEl.innerHTML = html;
+
+  // cập nhật số lượng
+  updateTotalBox(arr);
+}
+renderBox(colors);
+
+// cập nhật số lượng box
+function updateTotalBox(arr) {
+  pointsEl.innerText = arr.length;
+}
+renderBox(colors);
+
+// xóa box
+function deleteBox(index) {
+//   for (let i = 0; i < colors.length; i++) {
+//     if (i == index) {
+//       colors.splice(i, 1);
+//     }
+//   }
+
+// sử dụng filter
+colors = colors.filter((color, i) => i != index); // lọc những phần tử có chỉ số khác index
+  renderBox(colors);
+}
+
+// Thêm box
+btn.addEventListener('click', function() {
+    colors = [...colors, ...colorsCopy] // hoặc sử dụng concat
+    renderBox(colors);
+})
+
+renderBox(colors);

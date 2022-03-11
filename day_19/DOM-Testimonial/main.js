@@ -37,6 +37,7 @@ let users = [
 
 // Khi bấm vào mỗi user nào sẽ hiển thị màu, quote, name của user đó
 // Ảnh của user được active to hơn 1 tí (thêm class selected vào user được chọn - xem mã HTML để hiểu rõ hơn)
+/*
 const container = document.querySelector('.testimonials-container');
 const authorImage = document.querySelectorAll('.author');
 const quote = document.querySelector('p');
@@ -57,3 +58,39 @@ for (let i = 0; i < users.length; i++) {
         authorImage[i].classList.add('selected');
     })
 }
+*/
+
+// chữa bài
+// truy cập
+const testimonialsContainerEl = document.querySelector('.testimonial-container');
+const quoteEl = document.querySelector('.text');
+const authorNameEl = document.querySelector('.name');
+
+const authorsEl = document.querySelectorAll('.author');
+
+// render testimonal
+function renderTestimonial(index) {
+    // lấy ra thông tin object tương ứng
+    let testimonial = users[index];
+
+    // cập nhật thông tin
+    authorNameEl.innerText = testimonial.name;
+    quoteEl.innerText = testimonial.quote;
+    testimonialsContainerEl.style.backgroundColor = testimonial.color;
+}
+
+// Lắng nghe sự kiện
+Array.from(authorsEl).forEach((author, index) => {
+    author.addEventListener('click', function() {
+        // xóa toàn bộ class selected trước khi thêm
+        Array.from(authorsEl).map(ele => ele.classList.remove('selected'))
+
+        // thêm class selected vào author đang được ấn
+        author.classList.add('selected');
+
+        // render dữ liệu cho author được chọn
+        renderTestimonial(index)
+    })
+})
+
+renderTestimonial(0);
