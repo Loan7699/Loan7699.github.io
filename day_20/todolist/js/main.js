@@ -1,14 +1,14 @@
 // Phân tích
 // Câu 1. Các chức năng có trong ứng dụng là gì
 /*
-1. Thêm cv: gõ input rồi ấn vào nút thêm
+1. Thêm cv: gõ input rồi ấn vào nút thêm - thay đổi mảng
 tiêu đề là nội dung ô input
 trạng thái mặc định là false
 id: hàm function randomId
-2. xóa cv (delete)
-3. chỉnh sửa cv
+2. xóa cv (delete) - thay đổi mảng
+3. chỉnh sửa cv - thay đổi mảng - thay đổi mảng
 4. lọc cv theo trạng thái
-5. thay đổi trạng thái cv (toggle)
+5. thay đổi trạng thái cv (toggle) - thay đổi mảng
 */
 
 // Câu 2. Đối tượng trong ứng dụng là gì? công việc
@@ -24,23 +24,23 @@ function randomId() {
     return Math.floor(Math.random() * 1000000);
 }
 
-let todos = [
-    {
-        id: randomId(),
-        title: "play soccer",
-        status: false,
-    },
-    {
-        id: randomId(),
-        title: "do my homework",
-        status: true,
-    },
-    {
-        id: randomId(),
-        title: "go to school",
-        status: true,
-    },
-];
+let todos;
+    // {
+    //     id: randomId(),
+    //     title: "play soccer",
+    //     status: false,
+    // },
+    // {
+    //     id: randomId(),
+    //     title: "do my homework",
+    //     status: true,
+    // },
+    // {
+    //     id: randomId(),
+    //     title: "go to school",
+    //     status: true,
+    // },
+
 
 // Truy cập
 const todoList = document.querySelector(".todo-list");
@@ -108,13 +108,15 @@ function deleteTodo(id) {
             todos.splice(i, 1);
         }
     }
+
+    setDataToLocalStorage(todos)
     // tìm thấy thì xóa ra khỏi mảng todos
 
     // B2: Sau khi xóa xong thì gọi function renderTodo để cập nhật lại giao diện
 
     // C2: filter lọc các công việc không cùng id
     // todos = todos.filter(todo => todo.id != id)
-    renderTodo(todos);
+    // renderTodo(todos);
 }
 
 // 5. Thay đổi trạng thái công việc
@@ -138,9 +140,9 @@ function toggleStatus(id) {
         }
     }
 
-
+    setDataToLocalStorage(todos)
     // B2: Sau khi thay đổi DL xong thì gọi lại function renderTodo cập nhật lại giao diện
-    renderTodo(todos)
+    // renderTodo(todos)
 }
 
 // 4. Lọc công việc theo trạng thái
@@ -169,7 +171,9 @@ optionUnactive.addEventListener('click', function () {
 // 1. Thêm cv
 btnAdd.addEventListener('click', function () {
     // B1: lấy ra dữ liệu trong ô input
+    console.log(inputEl);
     let todo = inputEl.value;
+    console.log(todo);
     // B2: kiểm tra DL trống
     // Nếu có thì thông báo -> alert
     if (!todo) {
@@ -186,9 +190,11 @@ btnAdd.addEventListener('click', function () {
 
     // B4: thêm object mới vào mảng todos ban đầu
     todos.push(newtodo); // trả về độ dài mảng mới, thay đổi mảng ban đầu
+    // sau khi thay đổi mảng cần lưu lại DL vào localStorage
+    setDataToLocalStorage(todos)
 
     // B5: Render lại giao diện
-    renderTodo(todos);
+    // renderTodo(todos);
     // Clear DL trong ô input để nhập cv khác
     inputEl.value = ''; // gán dữ liệu ô input=0 (vì thẻ input không có nội dung bên trong nên không sử dụng input.innerText)
 })
@@ -203,17 +209,19 @@ function updateTodo(id) {
     // hiện nút sửa, ẩn nút thêm khi bấm btnupdate1
     btnupdate2.classList.remove('hide');
     btnAdd.classList.add('hide');
+    
 
     for (let i = 0; i < todos.length; i++) {
-        if (todos[i].id == id) {
+        if (id == todos[i].id) {
             // gán nội dung ô input bằng title của phần tử mảng chọn
-            inputEl.value = todos[i].title;
+            
+            inputEl.value = todos[i].title;;
 
             // bấm btn sửa, gán tiêu đề = nội dung mới của input
             btnupdate2.addEventListener('click', function () {
                 todos[i].title = inputEl.value;
     
-                renderTodo(todos);
+                // renderTodo(todos);
 
                 // ẩn nút sửa, hiện nút thêm
                 btnupdate2.classList.add('hide');
@@ -221,11 +229,38 @@ function updateTodo(id) {
             })
         }
     }
+    setDataToLocalStorage(todos)
 
     // !! title cập nhật mới liên tục qua value của input
-    renderTodo(todos);
+    // renderTodo(todos);
 }
 
-renderTodo(todos);
+// lấy dữ liệu trong localStorage
+function getDataFormLocalStorage() {
+    let localStorageValue = localStorage.getItem('todos');
+    if (localStorageValue) { // khác null
+        todos = JSON.parse(localStorageValue);
+    } else {
+        todos = [];
+    }
+
+    renderTodo(todos); // gọi khi có dữ liệu, ko gọi ngoài function như ban đầu
+}
+
+// Lưu dữ liệu vào localStorage
+function setDataToLocalStorage(arr) {
+    localStorage.setItem('todos', JSON.stringify(arr));
+    renderTodo(todos) // để ko cần render từng chức năng ở trên do đã nằm trong hàm set
+}
+
+// sử dụng sự kiện
+window.onload = getDataFormLocalStorage
+
+
+// Phần lắng nghe sự kiện bấm vào nút “sửa” thì có thể đặt ra bên ngoài
+
+// Khi bấm vào icon sửa thì chỉ cần đưa nội dung cần sửa lên ô input và lưu lại id của công việc cần sửa
+// id của công việc cần sửa có thể tạo 1 biến global để lưu
+// Sau khi sửa xong thì render lại giao diện
 
 // Note: mỗi lần thay đổi dữ liệu cần gọi lại function để cập nhật dữ liệu
