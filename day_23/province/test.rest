@@ -1,0 +1,16 @@
+// API lấy danh sách các tỉnh (province)
+// GET : https://provinces.open-api.vn/api/p/
+
+GET https://provinces.open-api.vn/api/p/ HTTP/1.1
+
+###
+// Lấy danh sách quận huyện (district)
+// GET : https://provinces.open-api.vn/api/p/${provinceCode}?depth=2
+GET https://provinces.open-api.vn/api/p/35?depth=2 HTTP/1.1
+
+###
+// Lấy danh sách xã phường
+// GET : https://provinces.open-api.vn/api/d/${districtCode}?depth=2
+
+
+GET https://provinces.open-api.vn/api/d/353?depth=2 HTTP/1.1
