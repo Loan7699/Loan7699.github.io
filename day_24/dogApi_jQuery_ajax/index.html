@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .hide {
+            display: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            margin: auto;
+        }
+
+        .image {
+            width: 400px;
+            height: 300px;
+            border: 2px solid #FFF;
+        }
+
+        /* .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        } */
+
+        .sub-breed {
+            text-decoration: underline;
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Breeds List</h3>
+
+    <div class="breads-list">
+        <select id="list"></select>
+
+        <button class="btn-sub">Get Sub Breed</button>
+    </div>
+
+    <div class="sub hide">
+        <h3>Sub Breeds List</h3>
+        <ul class="sub-breed"></ul>
+    </div>
+
+    <div class="image">
+        <img src="" alt="">
+    </div>
+
+    <script src="./jquery-3.6.0.min.js"></script>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
