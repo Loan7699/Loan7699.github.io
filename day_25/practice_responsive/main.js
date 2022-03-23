@@ -21,10 +21,11 @@ $(".menu-icon").click(function () {
 
 $(window).resize(function() {
     if($(window).innerWidth() > 768) {
-        $(".menu ul").css("display", "flex")
+        $(".page-number ul").css("display", "flex");
+        $("#overlay").css("display", "none")
         isShow = false
     } else {
-        $(".menu ul").css("display", "none")
+        $(".page-number ul").css("display", "none")
     }
 })
 
@@ -41,13 +42,6 @@ $('.menu-icon').click(function() {
 $('#overlay').click(function() {
     $('.page-number ul').css("display", "none");
     $('#overlay').css('display', 'none');
-})
-
-$(window).resize(function() {
-    if($(window).innerWidth() > 768) {
-        $("..page-number ul").css("display", "none")
-        $("#overlay").css("display", "none")
-    }
 })
 
 $('.menu-close').click(function() {
