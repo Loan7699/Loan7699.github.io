@@ -10,11 +10,14 @@
 let isShow = false
 $(".menu-icon").click(function () {
     isShow = !isShow
-    $(".menu ul").slideToggle(function () {
+    // !isShow = NOT isShow => true
+    $(".page-number ul").slideToggle(function () {
         if (isShow) {
-            $(".menu ul").css("display", "flex")
+            $(".page-number ul").css("display", "flex");
+            $('#overlay').css('display', 'block');
+
         } else {
-            $(".menu ul").css("display", "none")
+            $(".page-number ul").css("display", "none")
         }
     })
 })
@@ -29,15 +32,6 @@ $(window).resize(function() {
     }
 })
 
-
-$('.menu-icon').click(function() {
-    $('.page-number ul').css('display', 'flex')
-    $('#overlay').css('display', 'block');
-    // click menu màn overlay hiện
-})
-
-// Ban đầu xét cách left = -250px đúng bằng chiều rộng menu
-// sau khi click dùng đổi left về 0
 
 $('#overlay').click(function() {
     $('.page-number ul').css("display", "none");
