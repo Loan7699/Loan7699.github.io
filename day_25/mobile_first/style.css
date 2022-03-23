@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap');
+/* Dùng import thì page vào css, link thì nối trong index */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'sans-serif';
+    color: #111111;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.container {
+    width: 90%;
+    margin: auto; 
+    /* ra giữa */
+}
+
+.container > h1 {
+    text-align: center;
+}
+
+.container > p {
+    text-align: center;
+    font-style: italic;
+    margin: 16px 0;
+}
+
+.card-item {
+    margin-bottom: 32px;
+}
+
+.card-content {
+    padding: 16px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.1)
+}
+
+.card-content h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.card-content p {
+    margin: 10px 0;
+}
+
+.card-content button {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: brown;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Một số điểm chuyển tiếp (break point) được áp dụng trong các framework css (bootstrap): 
+< 567: Màn hình điện thoại
+567 < x < 768: Màn hình điện thoại cỡ lớn, quay ngang, tablet cỡ nhỏ
+768 < x < 992: tablet cỡ lớn
+992 < x < 1200: màn hình desktop cỡ nhỏ
+< 1200: Màn hình desktop cỡ lớn
+ */
+/* Thiết kế theo kiểu mobile first: áp dụng khi lớn hơn 576px*/
+@media (min-width : 576px) {
+    .container > h1 {
+        color: red;
+        font-size: 36px;
+    }
+
+    .card {
+        /* grid */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        /* phần giữa các card */
+    }
+
+    .card-item {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width : 992px) {
+
+    .container > h1 {
+        font-size: 42px;
+    }
+
+    .container > p {
+        margin: 20px 0;
+    }
+
+    .card {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 card 1 hàng */
+        grid-gap: 30px;
+    }
+}

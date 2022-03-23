@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap');
+/* Dùng import thì page vào css, link thì nối trong index */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'sans-serif';
+    color: #111111;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.header {
+    height: 70px;
+    background-color: #111111;
+    color: #fff;
+
+    padding: 0 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo span {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 32px;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu ul li {
+    text-transform: uppercase;
+    margin-left: 16px;
+}
+
+@media (max-width: 768px) {
+
+    .header {
+        position: relative;
+    }
+
+    .menu ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        background-color: brown;
+        flex-direction: column;
+
+        display: none;
+    }
+
+    .menu ul.show {
+        display: flex;
+        /* do nếu để display: block, sẽ ko áp dụng được flex; */
+    }
+
+    .menu ul li {
+        padding: 10px 0;
+    }
+    
+    .menu-icon {
+        display: inline-block;
+        font-size: 1.5rem;
+    }
+}
+
