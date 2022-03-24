@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans',sans-serif;
+    color: #111111;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.image2 img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.image1 {
+    height: 310px;
+    overflow: hidden;
+}
+
+.image1 img {
+    height: 100%;
+}
+
+.container {
+    margin: 0 90px;
+}
+
+h1, h2, h3, h6 {
+    font-family: "Roboto", sans-serif;
+}
+
+h4, h5 {
+    font-family: 'Playfair Display', serif;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    font-size: 0.8rem;
+}
+
+a {
+    color: #adcce9;
+}
+

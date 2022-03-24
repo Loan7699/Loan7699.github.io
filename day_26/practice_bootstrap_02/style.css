@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Open Sans',sans-serif;
+    color: #111111;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+h6, h3, h2, h4 {
+    font-family: 'Roboto', sans-serif;
+}
+
+input, textarea {
+    width: 100%;
+}
+
+footer {
+    font-size: 0.8rem;
+}
+
+a {
+    color: #d3bcf3;
+}
