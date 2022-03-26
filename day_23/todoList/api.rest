@@ -1,0 +1,56 @@
+// Lấy danh sách todos
+GET http://localhost:3000/todos HTTP/1.1
+
+###
+
+// Lấy thông tin chi tiết của todo theo id, trả về thông tin có id 2
+GET http://localhost:3000/todos/2 HTTP/1.1
+
+###
+
+// Tạo todo mới => trả về kết quả mới vừa tạo, thêm vào danh sách todos
+POST http://localhost:3000/todos HTTP/1.1
+Content-Type: application/json
+
+{
+    "id" : 5,
+    "title" : "Công việc 5 ",
+    "status" : "false"
+}
+
+###
+// Sửa todo
+PUT http://localhost:3000/todos/5 HTTP/1.1
+Content-Type: application/json
+
+{
+    "id" : 5,
+    "title" : "Công việc 5 - Update",
+    "status" : "true"
+}
+
+###
+// Xóa => trả về object rỗng
+DELETE http://localhost:3000/todos/4 HTTP/1.1
+
+###
+// Lọc cv có status = false
+GET http://localhost:3000/todos?status=true HTTP/1.1
+
+###
+// Full text-search
+GET http://localhost:3000/todos/posts?q=cơm
+
+###
+
+// Lấy danh sách users
+GET http://localhost:3000/users HTTP/1.1
+
+###
+
+// Sắp xếp tuổi users
+GET http://localhost:3000/users?_sort=age HTTP/1.1
+
+###
+GET http://localhost:3000/users?_sort=id HTTP/1.1
+

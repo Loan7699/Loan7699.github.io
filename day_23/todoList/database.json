@@ -1,0 +1,40 @@
+{
+  "todos": [
+    {
+      "id": 5,
+      "title": "Công việc 5 - Update",
+      "status": "true"
+    },
+    {
+      "id": 94306,
+      "title": "Công việc 2",
+      "status": false
+    },
+    {
+      "id": 33533,
+      "title": "Công việc 1",
+      "status": false
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Nguyễn Văn A",
+      "email": "a@gmail.com",
+      "age": "23"
+    },
+    {
+      "id": 2,
+      "name": "Nguyễn Văn B",
+      "email": "b@gmail.com",
+      "age": "22"
+    },
+    {
+      "id": 3,
+      "name": "Nguyễn Văn C",
+      "email": "c@gmail.com",
+      "age": "21"
+    }
+  ],
+  "posts": []
+}
