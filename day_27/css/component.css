@@ -1,0 +1,319 @@
+/* start */
+#start {
+  background-image: url(../image/Bitmap.png);
+  background-size: cover;
+  position: relative;
+  width: 1600px;
+  height: 841px;
+  left: 0px;
+  top: 0px;
+}
+
+#start h5 {
+  position: absolute;
+  left: 215px;
+  top: 35px;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+}
+
+#start h2 {
+  position: absolute;
+  left: -0.15%;
+  right: -0.15%;
+  top: calc(50% - 60px / 2 - 41px);
+
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 60px;
+
+  text-align: center;
+  color: #ffffff;
+}
+
+#start p {
+  width: 536px;
+
+  position: absolute;
+  left: 33%;
+  top: calc(50% - 64px / 2 + 39px);
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+
+  text-align: center;
+  color: #ffffff;
+}
+
+.log-info {
+  margin-top: 36px;
+  position: absolute;
+  top: 502px;
+  left: 290px;
+}
+
+input {
+  background-color: #ffffff;
+  opacity: 0.25;
+  border-radius: 4px;
+  width: 375px;
+}
+
+#start button {
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+
+  color: #ffffff;
+  background: linear-gradient(90deg, #fe985b 2.77%, #fe4fa7 100%);
+  padding: 17px 50px;
+}
+
+/* business */
+#business {
+  padding-top: 116px;
+}
+
+#business .container {
+  padding-bottom: 116px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.business-item h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 51px;
+  color: #414141;
+
+  width: 520px;
+  /* cẩn thận xét width sau */
+}
+
+.business-item .business-info:nth-child(2) {
+  margin: 57px 0 29px;
+}
+
+.business-info h5 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #414141;
+}
+
+.business-info p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  color: #6c6c6c;
+
+  width: 383px;
+}
+
+.business-video {
+  position: relative;
+  width: 556px;
+}
+
+.btn-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: linear-gradient(90deg, #fe985b 2.77%, #fe4fa7 100%);
+  width: 84px;
+  height: 84px;
+  border-radius: 100px;
+  color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* service */
+#service {
+  margin: 86px 0 132px;
+}
+
+.service-item-image {
+  width: 60px;
+  height: 60px;
+}
+
+.service-item h5 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #414141;
+  margin: 16px 0;
+}
+
+.service-item p {
+  font-weight: 300;
+  line-height: 28px;
+  color: #6c6c6c;
+}
+
+/* content */
+#content {
+  position: relative;
+}
+
+#content .image {
+  width: 395px;
+  height: 648px;
+  background-image: url(../image/man.png);
+
+  margin-top: 34px;
+}
+
+.content-detail p {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 40px;
+  color: #414141;
+}
+
+.content-detail p:first-child {
+  margin-top: 207px;
+}
+
+.content-detail h5 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #414141;
+}
+
+/* plan */
+#plan {
+  margin: 150px;
+}
+
+.content-plan h3 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 51px;
+  text-align: center;
+
+  color: #414141;
+}
+
+.premium,
+.free {
+  width: 371px;
+}
+
+.content-plan > p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+
+  color: #6c6c6c;
+  width: 548px;
+  height: 86px;
+
+  margin-left: 245px;
+}
+
+#plan .text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+
+  color: #6c6c6c;
+}
+
+.free {
+  background-color: #f6fafd;
+  margin-left: 220px;
+}
+
+#plan h5 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #414141;
+}
+
+.dollar {
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 86px;
+
+  color: #fe4fa7;
+}
+
+.unit {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+
+  text-align: center;
+  color: #414141;
+}
+
+.btn-free {
+  color: #ffffff;
+  background: linear-gradient(90deg, #fe985b 2.77%, #fe4fa7 100%);
+}
+
+#plan button {
+  padding: 14px 52px;
+  border-radius: 4px;
+}
+
+/* get-started */
+#get-started {
+  background: linear-gradient(90deg, #fe985b 2.77%, #fe4fa7 100%);
+  padding: 120px 0px;
+}
+
+#get-started h2 {
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 60px;
+}
+
+#get-started p {
+  font-size: 20px;
+  line-height: 30px;
+
+  width: 550px;
+  margin: 28px auto;
+  /* auto để p vào giữa */
+}
+
+#get-started button {
+  padding: 15px 50px;
+  background-color: #fff;
+  border-radius: 40px;
+  font-size: 18px;
+  line-height: 22px;
+  color: #464646;
+  border: none;
+}
+
+/* network */
+#network h5 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #464646;
+}
+
+#network .row {
+  display: flex;
+  flex-direction: row;
+}
