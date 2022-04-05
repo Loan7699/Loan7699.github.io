@@ -1,46 +1,110 @@
-/* business */
+/* start */
 @media (max-width: 768px) {
-    #business {
-        margin: 60px;
-    }
+  #start h2 {
+    font-size: 42px;
+  }
+
+  #start input {
+    margin: 10px 0px;
+  }
+
+
+
+  .log-info {
+    position: absolute;
+    top: 502px;
+    left: 120px;
+  }
 }
 
 @media (max-width: 576px) {
+    .log-info {
+        position: absolute;
+        top: 502px;
+        left: 50px;
+      }
+}
 
-    .business-item h2 {
-        width: auto;
-        font-size: 28px;
-    }
+/* business */
+@media (max-width: 768px) {
+  #business {
+    margin: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .business-item h2 {
+    width: auto;
+    font-size: 28px;
+  }
 }
 
 /* service*/
 @media (max-width: 576px) {
-    #service {
-        margin: 60px 0;
-    }
+  #service {
+    margin: 60px 0;
+  }
 }
 
 /* get-started */
 @media (max-width: 768px) {
-    #get-started h2 {
-        font-size: 42px;
-    } 
+  #get-started h2 {
+    font-size: 42px;
+  }
 
-    #get-started p {
-        font-size: 16px;
-        margin: 20px auto;
+  #get-started p {
+    font-size: 16px;
+    margin: 20px auto;
 
-        width: auto;
-    }
+    width: auto;
+  }
 }
 
 @media (max-width: 576px) {
+  #get-started {
+    padding: 60px 0;
+  }
 
-    #get-started {
-        padding: 60px 0;
-    }
+  #get-started h2 {
+    font-size: 30px;
+  }
+}
 
-    #get-started h2 {
-        font-size: 30px;
-    }
+/* #network */
+@media (max-width: 768px) {
+  #network .footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+
+  #network .title {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  #network .footer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
+
+  #network .title {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .free {
+    margin-left: 0;
+  }
+
+  .content-plan > p {
+    margin-left: 0;
+  }
 }
