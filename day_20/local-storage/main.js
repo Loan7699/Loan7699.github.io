@@ -48,3 +48,10 @@ localStorage.removeItem('name')
 
 // 5. Xóa toàn bộ localStorage
 localStorage.clear();
+
+
+// const c = JSON.parse(localStorage.getItem('cart'));
+
+
+// Mockup data
+// yarn add msw --dev

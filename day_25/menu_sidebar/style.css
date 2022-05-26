@@ -58,12 +58,13 @@ ul {
     background-color: #111111;
     opacity: 0.4;
     overflow: hidden;
-    display: none;
+    /* display: none; */
     /* giá trị ban đầu none */
     z-index: 1000;
 }
 
 @media (max-width: 768px) {
+
     .menu-icon {
         display: inline-block;
         font-size: 1.5rem;

@@ -15,7 +15,6 @@ async function getProvince() {
 }
 
 
-
 // Truy cập
 const provinceEl = document.getElementById('province');
 function renderProvince(arr) {
