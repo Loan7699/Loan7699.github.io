@@ -3,6 +3,7 @@
 function threeSum(array) {
     // sắp xếp mảng các số
     array.sort(function (a, b) { return a - b; });
+    console.log(array);
     // khai báo mảng chứa bộ 3 số và mảng sau khi tìm i,j,k bằng rỗng
     let triplets = [];
     let newArray = [];
@@ -14,9 +15,8 @@ function threeSum(array) {
         while (j < k) {
             if (array[i] + array[j] + array[k] == 0) {
                 // thỏa mãn Đk thì thêm gtri vào mảng bộ ba số
-                triplets.push(array[i]);
-                triplets.push(array[j]);
-                triplets.push(array[k]);
+                // thiếu TH xét trùng num[i] = num[i-1] và với j, k
+                triplets.push(array[i], array[j], array[k]);
 
                 // kiểm tra nếu mảng sau ko chứa mảng bộ ba thì thêm bộ ba vào mảng đó
                 if (newArray.includes(triplets) == false) {
@@ -28,7 +28,6 @@ function threeSum(array) {
                 j++;
                 k--;
             }
-
             else
                 j++;
         }
