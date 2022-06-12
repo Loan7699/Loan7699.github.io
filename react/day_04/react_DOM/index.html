@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- add reactjs to website -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+
+    <!-- sử dụng react_DOM , phải khởi tạo reactjs to website trước react_DOM-->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  </head>
+  <body>
+
+    <div id="root"></div>
+
+    <script>
+      // React
+      const divReact = React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "h2",
+          {
+            title: "Techmaster",
+          },
+          React.createElement("span", null, "Không thích học")
+        ),
+        React.createElement("p", null, "Học ReactJs dễ")
+      );
+      console.log(divReact);
+
+      // Render UI
+      // 1. Get root element
+
+      const container = document.getElementById('root');
+
+      const root = ReactDOM.createRoot(container);
+      root.render(divReact)
+
+    </script>
+  </body>
+</html>

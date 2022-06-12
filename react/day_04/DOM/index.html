@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <!-- 1. document.createElement()
+    2.document.body.appendChild()
+    3. console.dir()
+    4. innerText, id, className, style -->
+
+    <h1 id="heading">Hello guys!</h1>
+    
+    <script>
+
+        // truy xuất phần tử DOM
+        const h1 = document.querySelector('#heading');
+        console.log(h1); // ra object
+        console.dir(h1); // text
+
+        // tạo phần tử
+        const h2 = document.createElement('h2');
+        console.log(h2);
+        h2.innerHTML = "Hello Loan";
+
+        document.body.appendChild(h2);
+
+        // thêm class cho phần tử
+        h1.className = "test class-2";
+
+        // thay đổi thuộc tính phần tử
+        h1.style.color = "red";
+        h1.style = 'color: green; font-size: 20px';
+        Object.assign("h1.style", {
+            color: 'blue',
+            backgroundColor: 'grey',
+        })
+    </script>
+</body>
+</html>
