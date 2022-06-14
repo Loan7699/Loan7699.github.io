@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- thêm babel để dùng JSX -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="app"></div>
+
+    <script type="text/babel">
+
+
+        const styles = {
+            headerPage: {
+                display: "flex",
+                justifyContent: "space-between",
+                margin: "10px 20px 20px 20px",
+                height: "45px",
+                borderBottom: "1px solid #C0C0C0"
+            },
+
+            imageHeader: {
+                // height: "40px",
+                width: "auto",
+            },
+
+            boxHeader: {
+                display: "flex",
+            },
+
+            inputSearch: {
+                position: "relative",
+            },
+
+            imgInput: {
+                position: "absolute",
+                top: "10px",
+                right: "10px",
+            },
+
+            inputHeader: {
+                width: "500px",
+                padding: "10px",
+                border: "1px solid #C0C0C0",
+            },
+
+            box: {
+                backgroundColor: "#F5F5F5",
+                padding: "10px 20px",
+                height: "15px",
+                borderRadius: "0px 2px 2px 0px",
+                border: "1px solid #C0C0C0",
+                borderLeft: "none",
+            },
+
+            mic: {
+                backgroundColor: "#F5F5F5",
+                height: "18px",
+                borderRadius: "50px",
+                padding: "10px 14px",
+                marginLeft: "10px",
+            },
+
+            iconHeader: {
+                display: "flex",
+                alignItems: "center",
+            },
+
+            iHeader: {
+                fontSize: "20px",
+                paddingRight: "20px",
+            },
+
+            imgIcon: {
+                width: "32px",
+                borderRadius: "50px",
+            },
+
+            list: {
+                display: "flex",
+                flexDirection: "row",
+            },
+
+            listItem: {
+                backgroundColor: "#F5F5F5",
+                fontSize: "16px",
+                fontFamily: "Roboto, sans-serif",
+                padding: "8px 16px",
+                borderRadius: "20px",
+                border: "1px solid #DCDCDC",
+                margin: "8px"
+            },
+
+
+            content: {
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "center",
+                marginTop: "20px",
+                backgroundColor: "#F5F5F5",
+                borderTop: "1px solid #DCDCDC",
+            },
+
+            card: {
+                width: "300px",
+                margin: "8px",
+            },
+
+            imgContent: {
+                width: "300px",
+                paddingTop: "20px",
+            },
+
+            texth3: {
+                fontSize: "16px",
+                fontFamily: "Roboto, sans-serif",
+                fontWeight: "500",
+            },
+
+            textp: {
+                fontSize: "14px",
+                fontFamily: "Roboto, sans-serif",
+                fontWeight: "400",
+                color: "#696969"
+            }
+        }
+
+        function Header() {
+            return (
+                <div className='header-page' style={styles.headerPage}>
+                    <img src="https://static.wixstatic.com/media/9d8ed5_dafba1abf21146cc818be61248fe6905~mv2.png/v1/fill/w_800,h_400,al_c/9d8ed5_dafba1abf21146cc818be61248fe6905~mv2.png" style={styles.imageHeader} alt="logo" />
+
+                    <div className='box-search' style={styles.boxHeader}>
+                        <div className="input-search" style={styles.inputSearch}>
+                            <input type="text" placeholder="Tìm kiếm" style={styles.inputHeader} />
+                            <img src="https://www.gstatic.com/inputtools/images/tia.png" style={styles.imgInput} alt="ảnh" />
+                        </div>
+
+                        <div className="box" style={styles.box}>
+                            <i className="fa-solid fa-magnifying-glass" style={styles.iconSearch}></i>
+                        </div>
+                        <i className="fa-solid fa-microphone" style={styles.mic}></i>
+
+                    </div>
+
+                    <div className="icon">
+                        <i className="fa-solid fa-video" style={styles.iHeader}></i>
+                        <i className="fa-solid fa-braille" style={styles.iHeader}></i>
+                        <i className="fa-solid fa-bell" style={styles.iHeader}></i>
+                        <img src="https://yt3.ggpht.com/yti/APfAmoFq9dxwKVBUVFvnF-hED8-Xx4M5-jhbUFPyNyyy=s88-c-k-c0x00ffffff-no-rj-mo" style={styles.imgIcon} alt="" />
+                    </div>
+                </div>
+            )
+        }
+
+        const suggestList = ["Mix", "Music", "Ed Sheeran", "Charlie Puth", "Live", "Playlist", "John Legend", "Shawn Mendes", "Harry Styles", "Taylor Swift", "New to you"];
+
+        function Suggest({ contentList }) {
+            return (
+                    <span style={styles.listItem}>{contentList}</span>
+                
+            )
+        }
+
+        function Item({ image, title, description, views }) {
+            return (
+                <div className="card" style={styles.card}>
+                    <img src={image} alt="ảnh" style={styles.imgContent}/>
+                    <h3 className="item-tittle" style={styles.texth3}>{title}</h3>
+                    <p className="item-channel" style={styles.textp}>{description}</p>
+                    <p className="item-views" style={styles.textp}>{views}</p>
+                </div>
+            )
+        }
+
+        const App = (
+            <div id='wrapper'>
+                <Header />
+                {
+                    suggestList.map((list, index) => (
+                        <Suggest
+                            key={index}
+                            contentList={list}
+                        />
+                    ))
+                }
+                <div className="content" style={styles.content}>
+                    <Item
+                        image="https://file.tinnhac.com/resize/600x-/music/2017/03/18/eLaffoon-48f7.jpg"
+                        title="Charlie Puth - That's Hilarious [Official Video]"
+                        description="Charlie Puth Official"
+                        views='10,339,293 views . 1 month ago'
+                    />
+
+                    <Item
+                        image="https://file.tinnhac.com/resize/600x-/music/2017/03/18/eLaffoon-48f7.jpg"
+                        title="Charlie Puth - That's Hilarious [Official Video]"
+                        description="Charlie Puth Official"
+                        views='10,339,293 views . 1 month ago'
+                    />
+
+                    <Item
+                        image="https://file.tinnhac.com/resize/600x-/music/2017/03/18/eLaffoon-48f7.jpg"
+                        title="Charlie Puth - That's Hilarious [Official Video]"
+                        description="Charlie Puth Official"
+                        views='10,339,293 views . 1 month ago'
+                    />
+
+                    <Item
+                        image="https://file.tinnhac.com/resize/600x-/music/2017/03/18/eLaffoon-48f7.jpg"
+                        title="Charlie Puth - That's Hilarious [Official Video]"
+                        description="Charlie Puth Official"
+                        views='10,339,293 views . 1 month ago'
+                    />
+
+                    <Item
+                        image="https://file.tinnhac.com/resize/600x-/music/2017/03/18/eLaffoon-48f7.jpg"
+                        title="Charlie Puth - That's Hilarious [Official Video]"
+                        description="Charlie Puth Official"
+                        views='10,339,293 views . 1 month ago'
+                    />
+
+                    <Item
+                        image="https://file.tinnhac.com/resize/600x-/music/2017/03/18/eLaffoon-48f7.jpg"
+                        title="Charlie Puth - That's Hilarious [Official Video]"
+                        description="Charlie Puth Official"
+                        views='10,339,293 views . 1 month ago'
+                    />
+
+                    <Item
+                        image="https://file.tinnhac.com/resize/600x-/music/2017/03/18/eLaffoon-48f7.jpg"
+                        title="Charlie Puth - That's Hilarious [Official Video]"
+                        description="Charlie Puth Official"
+                        views='10,339,293 views . 1 month ago'
+                    />
+
+                    <Item
+                        image="https://file.tinnhac.com/resize/600x-/music/2017/03/18/eLaffoon-48f7.jpg"
+                        title="Charlie Puth - That's Hilarious [Official Video]"
+                        description="Charlie Puth Official"
+                        views='10,339,293 views . 1 month ago'
+                    />
+                </div>
+            </div>
+        )
+
+        const container = document.getElementById("app");
+        const root = ReactDOM.createRoot(container);
+        root.render(App);
+
+    </script>
+</body>
+
+</html>

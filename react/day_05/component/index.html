@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- thêm babel để dùng JSX -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+
+    <div id="app"></div>
+
+    <!-- Hooks
+        1. react element types: string, function/class
+        - wrapper: header => header component, content => content component , footer => footer component
+        2. Biểu diễn đơn giản với JSX
+        3. Quy ước đặt tên: viết hoa chữ cái đầu
+    -->
+
+    <script type="text/babel">
+       
+        // // function component
+        // function Header({page}) { // pages: props
+        //     console.log('af');
+        //     return (
+        //         <div className="Header">Header + {page}</div>
+        //     )
+        // }
+
+        // // class component
+        // class Content extends React.Component {
+        //     render() {
+        //         return (
+        //             <div className="Content">Content</div>
+        //         )
+        //     }
+        // }
+
+        // console.log(<Header/>);
+
+        // const app = (
+        //     <div className="wrapper">
+            // import header, footer (1 component)
+        //         <Header page='Techmaster'/>
+        //         <Content/>
+        //         <div className="footer">Footer</div>
+        //     </div>
+        // )
+
+        // const container = document.getElementById('app');
+        // const root = ReactDOM.createRoot(container);
+        // root.render(app);
+        
+        
+        // Bài tập: chuyển đổi code bên dưới thành component với tên là PostItem, nhân 3 bài
+        function PostItem(props) {
+            console.log('props', props.titlePost);
+            return (
+                <div className="post-item">
+                    <img src="https://media.techmaster.vn/api/static/c2m5ou451cob24f6skeg/OOWsCl64" alt={props.titlePost} style={{ width: '500px' }} />
+                    <h1 className="post-title">{props.titlePost}</h1>
+                    <p className="post-published">09 tháng 06, 2022 - 98 lượt xem</p>
+                </div>
+            )
+        }
+
+        // App.js
+        const App = (
+            <div id='wrapper'>
+                <div className="post-list">
+                   <PostItem titlePost='Techmaster' id={1}/>
+                
+                   <PostItem/>
+                   <PostItem/>
+                </div>
+            </div>
+        )
+
+        // index.js
+        const container = document.getElementById('app');
+        const root = ReactDOM.createRoot(container);
+        root.render(pp); // (<App/>)
+
+    </script>
+</body>
+
+</html>

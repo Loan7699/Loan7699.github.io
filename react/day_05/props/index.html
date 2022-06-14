@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- thêm babel để dùng JSX -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+
+    <div id="app"></div>
+
+    <!-- // 1. React element: (thẻ JSX giống html)
+        - sử dụng props như attribute của thẻ html;
+        - 2 props thường s/d: class, for => className, htmlFor
+        - tuân theo quy ước có sẵn: className, src, alt... ko thể tạo props riêng (giống html thông thường)
+    -->
+
+    <!-- 2. React component (function mà tạo ra component)
+        - sử dụng props như đối số của component
+        - tự do đặt tên props: theo quy ước camelCase
+    -->
+
+    <!-- 3. Chú ý
+        - props "key" là prop đặc biệt, chỉ dùng khi đưa cái RReact component vào Array
+        - props cơ bản là đối số của component
+        => props có thể là bất kì kiểu dữ liệu gì
+        - sử dụng destructuring
+     -->
+
+    <!-- // Bài tập component: tạo 1 component, render 1 mảng sử dụng map, props
+    Link Api: https://generatedata.com/-->
+
+    <script type="text/babel">
+
+        const users = [
+            {
+                "name": "Hilda Pugh",
+                "phone": "(682) 564-8407",
+                "email": "magnis.dis@yahoo.edu",
+                "address": "Ap #857-5453 Elementum, Rd."
+            },
+            {
+                "name": "Russell Mason",
+                "phone": "1-601-948-1878",
+                "email": "metus.vivamus@icloud.net",
+                "address": "Ap #816-3932 Mauris Road"
+            },
+            {
+                "name": "Peter Cross",
+                "phone": "(873) 684-8120",
+                "email": "curabitur.massa@icloud.edu",
+                "address": "Ap #913-4289 Dictum. Ave"
+            },
+            {
+                "name": "Macon Cain",
+                "phone": "1-851-411-9034",
+                "email": "vulputate.lacus.cras@outlook.couk",
+                "address": "653-5848 Vitae Avenue"
+            },
+            {
+                "name": "Philip Maxwell",
+                "phone": "(584) 513-8506",
+                "email": "dolor.sit.amet@outlook.ca",
+                "address": "Ap #655-1731 Dui, Avenue"
+            }
+        ]
+
+        // truyền các giá trị trong mảng props vào nội dung thẻ li
+        function UserItem(props) { // (props): ({user})
+            return (
+                <ul>
+                    <li>{props.name}</li>
+                    <li>{props.phone}</li>
+                    <li>{props.email}</li>
+                    <li>{props.address}</li>
+                    <button onClick={() =>
+                        console.log(Math.random())
+                    }>
+                    Click me!
+                    </button>
+                </ul>
+            )
+        }
+
+        // sử dụng map duyệt qua mảng lấy giá trị của key tương ứng với từng user trong mảng
+        // mảng props = [key,name,phone,email,address]
+        const App = (
+            <div id='wrapper'>
+                {
+                    users.map((user, index) => (
+                        <UserItem
+                            key={index}
+                            name={user.name}
+                            phone={user.phone}
+                            email={user.email}
+                            address={user.address} />
+                    )
+                    ) // user={user}
+                }
+            </div>
+        )
+
+        const container = document.getElementById('app');
+        const root = ReactDOM.createRoot(container);
+        root.render(App);
+
+    </script>
+</body>
+
+</html>

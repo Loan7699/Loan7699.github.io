@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- thêm babel để dùng JSX -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // // React
+        // const ulReact1 = React.createElement(
+        //     'ul',
+        //     null, // hoặc {}
+        //     // nếu thêm id, null=> { id: "ul_ele"}
+        //     React.createElement('li', null, "Javascript"),
+        //     React.createElement('li', null, "ReactJs"),
+        // )
+        // console.log(ulReact1);
+
+        // // Render UI
+        // // 1. Get root element
+
+        // const container = document.getElementById('root');
+
+        // const root = ReactDOM.createRoot(container);
+        // root.render(ulReact1);
+
+        // JSX
+        // const postItemJSX = <div>
+        //     <h2 title='Techmaster'>Học Reactjs</h2>
+        //     <p>Học ReactJs dễ</p>
+        // </div>
+
+        // const container = document.getElementById('root');
+
+        // const root = ReactDOM.createRoot(container);
+        // root.render(postItemJSX);
+
+
+        // const course = [{
+        //     name: 'Lập trình cơ bản',
+        // }, {
+        //     name: 'Design Responsive',
+        // }, {
+        //     name: 'React JS'
+        // }];
+
+        // const ulReact2 = React.createElement(
+        //     'ul',
+        //     null,
+        //     React.createElement('li', null, course[0].name),
+        //     React.createElement('li', null, course[1].name),
+        //     React.createElement('li', null, course[2].name),
+        // )
+
+        // console.log(ulReact2);
+
+        // const container = document.getElementById('root');
+
+        // const root = ReactDOM.createRoot(container);
+        // root.render(ulReact2);
+
+        // JSX
+        // viết Javascripttrong JSX bằng dấu {}
+        // const ulJSX = (
+        //     <ul>
+        //         {course.map((course, index) => <li key={index}>{course.name}</li>)}
+        //     </ul>
+        // )
+
+        const course = [
+            {
+                name: 'HTML, CSS'
+            },
+
+            {
+                name: 'Responsive'
+            },
+
+            {
+                name: 'ReactJS'
+            },
+
+        ];
+
+        const ul = <ul>
+            {course.map((course) =>
+            <li>{course.name}</li>
+            )}
+        </ul>
+
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        root.render(ul);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- thêm babel để dùng JSX -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    
+    <div id="app"></div>
+
+    <script type="text/babel">
+
+        function PostItem(props) { // PostItem({title,image,description,publishedAt}) => {title,image,description,publishedAt} = props (// sử dụng destructuring cho props component)
+
+        // truyền {image} thay cho {props.image} và tương tự các props còn lại
+
+            if (typeof props.callback === 'function') {
+                props.callback(Math.random());
+            } /// kiểm tra nếu props dạng hàm thì gọi hàm callback()
+            
+            return (
+                <div className="post-item">
+                    <label htmlFor="email">Email</label>
+                    <input id='email'/>
+
+                    <img src={props.image} alt="ảnh"/>
+
+                    <h2 className="post-title">{props.title}</h2>
+
+                    <p className="post-desc">{props.description}</p>
+
+                    <p className="post-published">{props.publishedAt}</p>
+                </div>
+            )
+        }
+
+        // PostItem.js
+        const App = (
+            <div id="wrapper">
+                <PostItem
+                    title='1 TechMaster - Học là có việc'
+                    image='https://media.techmaster.vn/api/static/bub3enc51co7s932dsk0/_z9mouZg'
+                    description='1 TechMaster cung cấp các khóa học từ căn bản đến chuyên sâu về Công nghệ thông tin'
+                    publishedAt='1 Định hướng Techmaster là đào tạo CNTT có tính thực tiễn áp dụng cao'
+                    callback={(random) => {
+                        console.log('random:', random);
+                    }}
+                />
+               
+                <PostItem
+                    title='2 TechMaster - Học là có việc'
+                    image='https://media.techmaster.vn/api/static/bub3enc51co7s932dsk0/_z9mouZg'
+                    description='2 TechMaster cung cấp các khóa học từ căn bản đến chuyên sâu về Công nghệ thông tin'
+                    publishedAt='2 Định hướng Techmaster là đào tạo CNTT có tính thực tiễn áp dụng cao'
+                />
+
+                <PostItem
+                    title='3 TechMaster - Học là có việc'
+                    image='https://media.techmaster.vn/api/static/bub3enc51co7s932dsk0/_z9mouZg'
+                    description='3 TechMaster cung cấp các khóa học từ căn bản đến chuyên sâu về Công nghệ thông tin'
+                    publishedAt='3 Định hướng Techmaster là đào tạo CNTT có tính thực tiễn áp dụng cao'
+                />
+            </div>
+            
+        )
+
+        // index.js
+        const container = document.getElementById('app');
+        const root = ReactDOM.createRoot(container);
+        root.render(App);
+
+    </script>
+</body>
+</html>
+
