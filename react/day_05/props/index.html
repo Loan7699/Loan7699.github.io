@@ -29,7 +29,7 @@
     -->
 
     <!-- 3. Chú ý
-        - props "key" là prop đặc biệt, chỉ dùng khi đưa cái RReact component vào Array
+        - props "key" là prop đặc biệt, chỉ dùng khi đưa React component vào Array
         - props cơ bản là đối số của component
         => props có thể là bất kì kiểu dữ liệu gì
         - sử dụng destructuring
@@ -74,18 +74,15 @@
         ]
 
         // truyền các giá trị trong mảng props vào nội dung thẻ li
+
+        // UI component: thường để hiển thị giao diện người dùng, ít khi thực hiện tác vụ
         function UserItem(props) { // (props): ({user})
             return (
                 <ul>
-                    <li>{props.name}</li>
+                    <li >{props.name}</li>
                     <li>{props.phone}</li>
                     <li>{props.email}</li>
                     <li>{props.address}</li>
-                    <button onClick={() =>
-                        console.log(Math.random())
-                    }>
-                    Click me!
-                    </button>
                 </ul>
             )
         }
@@ -93,6 +90,7 @@
         // sử dụng map duyệt qua mảng lấy giá trị của key tương ứng với từng user trong mảng
         // mảng props = [key,name,phone,email,address]
         const App = (
+
             <div id='wrapper'>
                 {
                     users.map((user, index) => (
@@ -101,7 +99,9 @@
                             name={user.name}
                             phone={user.phone}
                             email={user.email}
-                            address={user.address} />
+                            address={user.address}
+                            onClick={handleClick}
+                        />
                     )
                     ) // user={user}
                 }

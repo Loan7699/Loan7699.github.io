@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSX #2</title>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+
+    <div id="app"></div>
+
+    <!-- Phần I:
+        - xử lý DOM event
+        - Component do chúng ta định nghĩa phải viết in hoa kí tự đầu, chọn component trong 1 object
+        - null, boolean, undefined ko được render
+        - kết hợp toán tử logic &&, || để render theo điều kiện
+    -->
+
+    <!-- Phần II:
+    - Props trong JSX
+        quy ước tạo ra component và truyền props có 2 cách
+        - <YourComponent
+            propName1="String Literals"
+            propName2={expressipon} (các toán tử hoặc các biến truyền biến) (if else, switch case.. bị lỗi do không phải expression)
+            ex: <Button title={"Phương Loan"}
+        />
+        - props default to "true": props ko gán gtri thì mặc định là "true"
+        - Spread/Rest props
+        - Children prrops
+            <YourComponent>String literals</YourComponent>
+            <YourComponent>{expression}</YourComponent>
+        - render props
+    -->
+
+    <script type="text/babel">
+
+        // Spread/Rest props
+        // truyền nhiều props trong Input(): chỉ props label đưa vào label, các props còn lại đưa vào input
+        function Input({label, ...inputProps}) { // mặc định type là text; {label, type, placeholder} // dùng rest cho các props còn lại
+            return (
+                // dùng spread dải props của input: {...inputProps}
+                <div>
+                    <label>{label}</label>
+                    <input {...inputProps} />
+                </div>
+            )
+        }
+
+        function App() {
+            return (
+                <div id="wrapper">
+                    <Input 
+                    label="Fullname"
+                    type="checkbox"
+                    placeholder="Enter name..."
+                    onFocus={() => {
+                        console.log(Math.random());
+                    }}
+                    />
+                </div>
+            )
+        }
+
+        const container = document.getElementById("app");
+        const root = ReactDOM.createRoot(container);
+        root.render(<App />);
+
+    </script>
+
+</body>
+
+</html>

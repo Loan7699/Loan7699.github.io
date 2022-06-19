@@ -9,7 +9,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -95,9 +96,10 @@
                 borderRadius: "50px",
             },
 
-            list: {
+            titleList: {
                 display: "flex",
-                flexDirection: "row",
+                justifyContent: "center",
+            
             },
 
             listItem: {
@@ -130,13 +132,13 @@
                 paddingTop: "20px",
             },
 
-            texth3: {
+            textH3: {
                 fontSize: "16px",
                 fontFamily: "Roboto, sans-serif",
                 fontWeight: "500",
             },
 
-            textp: {
+            textP: {
                 fontSize: "14px",
                 fontFamily: "Roboto, sans-serif",
                 fontWeight: "400",
@@ -172,22 +174,22 @@
             )
         }
 
-        const suggestList = ["Mix", "Music", "Ed Sheeran", "Charlie Puth", "Live", "Playlist", "John Legend", "Shawn Mendes", "Harry Styles", "Taylor Swift", "New to you"];
+        const suggestList = ["Mix", "Music", "Ed Sheeran", "Charlie Puth", "Live", "Playlist" ,"John Legend", "Shawn Mendes", "Harry Styles", "Taylor Swift", "New to you"];
 
         function Suggest({ contentList }) {
             return (
-                    <span style={styles.listItem}>{contentList}</span>
-                
+                <span style={styles.listItem}>{contentList}</span>
+
             )
         }
 
         function Item({ image, title, description, views }) {
             return (
                 <div className="card" style={styles.card}>
-                    <img src={image} alt="ảnh" style={styles.imgContent}/>
-                    <h3 className="item-tittle" style={styles.texth3}>{title}</h3>
-                    <p className="item-channel" style={styles.textp}>{description}</p>
-                    <p className="item-views" style={styles.textp}>{views}</p>
+                    <img src={image} alt="ảnh" style={styles.imgContent} />
+                    <h3 className="item-tittle" style={styles.textH3}>{title}</h3>
+                    <p className="item-channel" style={styles.textP}>{description}</p>
+                    <p className="item-views" style={styles.textP}>{views}</p>
                 </div>
             )
         }
@@ -195,14 +197,17 @@
         const App = (
             <div id='wrapper'>
                 <Header />
-                {
-                    suggestList.map((list, index) => (
-                        <Suggest
-                            key={index}
-                            contentList={list}
-                        />
-                    ))
-                }
+                <div className="title-list" style={styles.titleList}>
+                    {
+                        suggestList.map((list, index) => (
+                            <Suggest
+                                key={index}
+                                contentList={list}
+                            />
+                        ))
+                    }
+                </div>
+
                 <div className="content" style={styles.content}>
                     <Item
                         image="https://file.tinnhac.com/resize/600x-/music/2017/03/18/eLaffoon-48f7.jpg"

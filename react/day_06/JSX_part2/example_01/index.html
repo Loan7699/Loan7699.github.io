@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSX #2</title>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+
+    <div id="app"></div>
+
+    <!-- Phần I:
+        - xử lý DOM event
+        - Component do chúng ta định nghĩa phải viết in hoa kí tự đầu, chọn component trong 1 object
+        - null, boolean, undefined ko được render
+        - kết hợp toán tử logic &&, || để render theo điều kiện
+    -->
+
+    <!-- Phần II:
+    - Props trong JSX
+        - <YourComponent
+            propName1="String Literals"
+            propName2={expressipon}
+        />
+        - props default to "true"
+        - Spread/Rest props
+        - Children prrops
+            <YourComponent>String literals</YourComponent>
+            <YourComponent>{expression}</YourComponent>
+        - render props
+    -->
+
+    <script type="text/babel">
+
+        const course = [
+            {
+                title: "Javascript cơ bản",
+                price: 1000,
+            },
+
+            {
+                title: "Javascript nâng cao",
+                price: 2000,
+            },
+
+            {
+                title: "ReactJs",
+                price: 3000,
+            },
+        ];
+
+        // click vào h2 => in ra h2
+        function CourseItem({ course, onClick }) {
+            return (
+                <div>
+                    <h2
+                        onClick={() => onClick(course)}
+                    >
+                        {course.title}
+                    </h2>
+                    <p>{course.price}</p>
+                </div>
+            )
+        }
+
+        function App() {
+
+            // use Callbacl
+            const handleClick = (course) => { // hàm xử lý sự kiện onclick
+                console.log(course.title);
+            }
+
+            return (
+                <div id="wrapper">
+                    {course.map((course, index) => (
+                        <CourseItem
+                            key={index}
+                            course={course}
+                            onClick={handleClick}
+                        />
+                    )
+                    )
+                    }
+                </div>
+            )
+        }
+
+        const container = document.getElementById("app");
+        const root = ReactDOM.createRoot(container);
+        root.render(<App />);
+
+    </script>
+
+</body>
+
+</html>

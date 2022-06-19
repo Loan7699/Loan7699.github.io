@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSX #2</title>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+
+    <div id="app"></div>
+
+    <!-- Phần I:
+        - xử lý DOM event
+        - Component do chúng ta định nghĩa phải viết in hoa kí tự đầu, chọn component trong 1 object
+        - null, boolean, undefined ko được render
+        - kết hợp toán tử logic &&, || để render theo điều kiện
+    -->
+
+    <!-- Phần II:
+    - Props trong JSX
+        - <YourComponent
+            propName1="String Literals"
+            propName2={expressipon}
+        />
+        - props default to "true"
+        - Spread/Rest props
+        - Children prrops
+            <YourComponent>String literals</YourComponent>
+            <YourComponent>{expression}</YourComponent>
+        - render props
+    -->
+
+    <script type="text/babel">
+
+        function List({data, children}) {
+            return (
+                <ul>
+                    {data.map((item, index) => children(item, index))}
+                </ul>
+            )
+        }
+
+        function App() {
+
+            const cars = ["Honda", "Mazda"]
+
+            return (
+                <div id="wrapper">
+                    <List data={cars}>
+                    {(item, index) => <li key={index}>{item}</li>}
+                    </List>
+                </div>
+            )
+        }
+
+        const container = document.getElementById("app");
+        const root = ReactDOM.createRoot(container);
+        root.render(<App />);
+
+    </script>
+
+</body>
+
+</html>

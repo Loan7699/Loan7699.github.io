@@ -64,7 +64,13 @@
             console.log('props', props.titlePost);
             return (
                 <div className="post-item">
-                    <img src="https://media.techmaster.vn/api/static/c2m5ou451cob24f6skeg/OOWsCl64" alt={props.titlePost} style={{ width: '500px' }} />
+                    <img 
+                        onClick={() => 
+                            {console.log(props.titlePost)}}
+                            src="https://media.techmaster.vn/api/static/c2m5ou451cob24f6skeg/OOWsCl64" 
+                            alt={props.titlePost} 
+                            style={{ width: '500px' }} 
+                    />
                     <h1 className="post-title">{props.titlePost}</h1>
                     <p className="post-published">09 tháng 06, 2022 - 98 lượt xem</p>
                 </div>
@@ -86,7 +92,7 @@
         // index.js
         const container = document.getElementById('app');
         const root = ReactDOM.createRoot(container);
-        root.render(pp); // (<App/>)
+        root.render(App); // (<App/>)
 
     </script>
 </body>

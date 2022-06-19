@@ -1,0 +1,40 @@
+.App {
+    background-color: black;
+}
+
+.game {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+
+    margin: 0 auto;
+    width: 50%;
+    height: 100vh;
+}
+
+.score {
+    display: flex;
+   justify-content: center;
+
+   padding-top: 100px;
+}
+
+.answer {
+    display: flex;
+    justify-content: center;
+    
+    margin: 30px auto;
+
+    font-size: 36px;
+
+}
+
+button {
+    padding: 8px 16px;
+    margin: 30px 8px;
+    border: none;
+}
+
+button:active {
+    background-color: brown;
+}
