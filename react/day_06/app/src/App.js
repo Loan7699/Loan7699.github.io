@@ -114,7 +114,7 @@ export default App;
 
 // Ví dụ 4: Set state là thay thế state bằng giá trị mới ko phải là thêm giá trị. Ví dụ khi thêm key và value cho 1 obj
 
-function App() {
+/* function App() {
 
   const [info, setCounter] = useState({
     name: " Phuong Loan",
@@ -146,5 +146,31 @@ function App() {
   );
 }
 export default App;
+*/
 
-// ví dụ đổi màu box khi nhấn
+// ví dụ: khi bấm nút lấy phần thưởng render ra h1 bất kì trong mảng gift có sẵn
+
+const gifts = [
+  "Snack",
+  "Ice cream",
+  "Fruits"
+];
+
+function App() {
+
+  const [gift, setGift] = useState();
+
+  function RandomGift() {
+    let index = Math.floor(Math.random() *gifts.length);
+    setGift(gifts[index]);
+  }
+
+  return (
+    <div style={{padding: 30}}>
+      <h1>{gift || "Chưa có phần thưởng nào"}</h1>
+      <button onClick={RandomGift}>Recieve gift</button>
+    </div>
+  )
+}
+
+export default App;

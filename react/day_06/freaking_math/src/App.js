@@ -2,14 +2,32 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 
-import RenderGame from './components/startPage';
+import RenderGame from './components/StartPage';
+import StartGame from './components/StartGame';
 
 function App() {
-    return (
-      <div className="App">
-        <RenderGame/>
-      </div>
-    );
+
+  const [start, setStart] = useState(false);
+
+  const handleStarted = () => {
+    setStart(prev => !prev);
+    console.log('Loan');
+  }
+
+  return (
+    <div className="App">
+      <RenderGame />
+      {/* {
+        start
+          ?
+          <RenderGame handleStart={handleStarted}/>
+          :
+          <StartGame  />
+      } */}
+
+    </div>
+  );
 }
 
 export default App;
+

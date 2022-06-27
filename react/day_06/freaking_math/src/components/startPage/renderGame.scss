@@ -38,3 +38,10 @@ button {
 button:active {
     background-color: brown;
 }
+
+.time {
+    display: flex;
+    justify-content: center;
+
+    margin: auto;
+}
