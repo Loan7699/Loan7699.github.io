@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // import icon
 import { HiHome } from "react-icons/hi";
@@ -9,15 +9,16 @@ import { MdOutlineExplore } from "react-icons/md";
 function Header() {
 
     return (
-        <div className="flex justify-evenly items-center py-2.5 bg-[rgb(250, 250, 250)]">
+        <div className="flex justify-evenly items-center py-2.5 bg-[rgb(255, 255, 255)]">
 
             <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/840px-Instagram_logo.svg.png' className='w-28' />
 
-            <div className='bg-slate-200'>
-                <input
-                    type='text'
-                    placeholder="Search"
-                />
+            <div className=''>
+                    <input
+                        type='text'
+                        placeholder="Search"
+                        className='bg-[#F2F3F5] h-9 px-4 py-1 rounded-lg'
+                    />
                 {/* <div className='flex justify-center items-center text-slate-400'>
                     <FiSearch />
                     <span>Search</span>
@@ -49,7 +50,7 @@ function Header() {
                 <li>
                     <Link to="/about">
                         <div>
-                            <img src='https://i.pinimg.com/originals/a0/1d/55/a01d5552778440f9333bbffe57475ce5.jpg' alt='Chanyeol' className='w-6 h-6 rounded-full ml-[22px]'></img>
+                            <img src='https://i.pinimg.com/originals/a0/1d/55/a01d5552778440f9333bbffe57475ce5.jpg' alt='Chanyeol' className='w-6 h-6 rounded-full ml-[22px] border border-slate-300 hover:border-slate-900'></img>
                         </div>
                     </Link>
                 </li>
