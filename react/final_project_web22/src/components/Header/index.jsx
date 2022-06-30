@@ -1,60 +1,134 @@
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
+// s/d Tippy
+import Tippy from '@tippyjs/react/headless';
+
+import { Wrapper as PropperWrapper } from './Propper';
 
 // import icon
 import { HiHome } from "react-icons/hi";
-import { RiMessengerLine } from "react-icons/ri";
+import { RiMessengerLine, RiSearchLine, RiCloseFill } from "react-icons/ri";
 import { FiPlusSquare, FiHeart, FiSearch } from "react-icons/fi";
 import { MdOutlineExplore } from "react-icons/md";
+import { AiFillCloseCircle } from "react-icons/ai";
+
+import AccountItemResult from './Account_item_result';
+import SelectionAccount from './SelectionsAccount';
+import Notifications from './Notifications';
 
 function Header() {
 
+    const [searchResult, setSearchResult] = useState([])
+    // kết quả tìm kiếm
+
+    useEffect(() => {
+        setTimeout(() => {
+            setSearchResult([1, 2, 3])
+        }, 0)
+    }, [])
+
     return (
-        <div className="flex justify-evenly items-center py-2.5 bg-[rgb(255, 255, 255)]">
+        <div>
+            <div className="py-2.5 flex justify-between items-center px-[207px] shadow-[0_0px_1px_1px_rgba(0,0,0,0.12)]">
+                <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/840px-Instagram_logo.svg.png' className='w-28' />
 
-            <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/840px-Instagram_logo.svg.png' className='w-28' />
+                {/* <Tippy
+                    interactive // seclect kết quả
+                    // kết quả tìm kiếm > 0
+                    visible={searchResult.length > 0}
 
-            <div className=''>
-                    <input
-                        type='text'
-                        placeholder="Search"
-                        className='bg-[#F2F3F5] h-9 px-4 py-1 rounded-lg'
-                    />
-                {/* <div className='flex justify-center items-center text-slate-400'>
-                    <FiSearch />
-                    <span>Search</span>
-                </div> */}
-            </div>
+                    render={(attrs) => (
+                        <div className='w-[350px]' tabIndex="-1" {...attrs}>
+                            <PropperWrapper>
+                                <div className='flex justify-between mx-4'>
+                                    <h4 className='text-[#262626] font-semibold'>Recent</h4>
+                                    <button className='text-[#0095F6]'>Clear all</button>
+                                </div>
 
-            <ul className='flex text-[#262626]'>
-                <li>
-                    <Link to="/">
-                        <HiHome className='w-6 h-6 ml-[22px]' />
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/chat">
-                        <RiMessengerLine className='w-6 h-6 ml-[22px]' />
-                    </Link>
-                </li>
-                <li>
-                    <FiPlusSquare className='w-6 h-6 ml-[22px]' />
-                </li>
-                <li>
-                    <Link to="/explore">
-                        <MdOutlineExplore className='w-6 h-6 ml-[22px]' />
-                    </Link>
-                </li>
-                <li>
-                    <FiHeart className='w-6 h-6 ml-[22px]' />
-                </li>
-                <li>
-                    <Link to="/about">
-                        <div>
-                            <img src='https://i.pinimg.com/originals/a0/1d/55/a01d5552778440f9333bbffe57475ce5.jpg' alt='Chanyeol' className='w-6 h-6 rounded-full ml-[22px] border border-slate-300 hover:border-slate-900'></img>
+                                <AccountItemResult />
+                                <AccountItemResult />
+                            </PropperWrapper>
                         </div>
-                    </Link>
-                </li>
-            </ul>
+                    )}
+                >
+                    <div className='flex justify-center items-center bg-[#F2F3F5] rounded-lg px-4 py-1 h-9'>
+                        <RiSearchLine className='text-[#8E8E8E] mr-3' />
+                        <div>
+                            <input
+                                className='bg-[#F2F3F5] outline-none'
+                                type='text'
+                                placeholder="Search"
+
+                            />
+                        </div>
+
+                        <AiFillCloseCircle className='text-[#8E8E8E]' />
+
+                        
+                    </div>
+                </Tippy> */}
+
+                <ul className='flex text-[#262626]'>
+                    <li>
+                        <Link to="/">
+                            <HiHome className='w-6 h-6 ml-[22px]' />
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/chat">
+                            <RiMessengerLine className='w-6 h-6 ml-[22px]' />
+                        </Link>
+                    </li>
+                    <li>
+                        <FiPlusSquare className='w-6 h-6 ml-[22px]' />
+                    </li>
+                    <li>
+                        <Link to="/explore">
+                            <MdOutlineExplore className='w-6 h-6 ml-[22px]' />
+                        </Link>
+                    </li>
+                    <li>
+                        
+                        <Tippy
+                            interactive // seclect kết quả
+                            // kết quả tìm kiếm > 0
+                            visible={searchResult.length > 0}
+
+                            render={(attrs) => (
+                                <div className='' tabIndex="-1" {...attrs}>
+                                    <PropperWrapper>
+                                        <Notifications />
+                                    </PropperWrapper>
+                                </div>
+                            )}
+                        >
+                            <div><FiHeart className='w-6 h-6 ml-[22px]' /></div>
+                        </Tippy>
+                    </li>
+                    <li>
+                        <Link to="/about">
+                            <Tippy
+                                interactive // seclect kết quả
+                                // kết quả tìm kiếm > 0
+                                visible={searchResult.length > 0}
+
+                                render={(attrs) => (
+                                    <div className='' tabIndex="-1" {...attrs}>
+                                        <PropperWrapper>
+                                            <SelectionAccount />
+                                        </PropperWrapper>
+                                    </div>
+                                )}
+                            >
+                                <div>
+                                    <img src='https://i.pinimg.com/originals/a0/1d/55/a01d5552778440f9333bbffe57475ce5.jpg' alt='Chanyeol' className='w-6 h-6 rounded-full ml-[22px] border border-slate-300 hover:border-slate-900'></img>
+                                </div>
+                            </Tippy>
+                        </Link>
+                    </li>
+                </ul>
+
+            </div>
 
         </div>
     );

@@ -16,14 +16,20 @@ function SuggestedProfile() {
                     <img
                     key={index}
                     className=''
-                    src={`/images/avatars/${user.username}.jfif`}
+                    src={`/images/avatars/${user.username}.jpeg`}
                     alt='avatar'
                 />
                 )}
+                {/* {console.log(users[0].username)} */}
 
-                <Link>
+                {/* <img
+                    src={`/images/avatars/${users[0].username}.jpeg`}
+                    alt='avatar'
+                /> */}
+
+                {/* <Link>
                     <p className="">{users.username}</p>
-                </Link>
+                </Link> */}
 
             </div>
 
