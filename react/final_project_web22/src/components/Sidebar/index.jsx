@@ -1,11 +1,13 @@
-import SuggestedProfile from "./SuggestedProfile";
+import User from "./User";
 import Suggestions from "./Suggestions";
+import Footer from './Footer'
 
 function Sidebar () {
     return (
-        <div className="bg-neutral-700 w-[293px] min-h-screen">
-            
-            <SuggestedProfile />
+        <div className="w-[293px] sticky top-24">
+            <User />
+            <Suggestions/>
+            <Footer />
         </div>
     )
 }

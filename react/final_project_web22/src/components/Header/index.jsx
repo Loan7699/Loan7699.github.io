@@ -28,14 +28,15 @@ function Header() {
     }, [])
 
     return (
-        <div>
-            <div className="py-2.5 flex justify-between items-center px-[207px] shadow-[0_0px_1px_1px_rgba(0,0,0,0.12)]">
+        //  fixed top-0 right-0 left-0: chưa cố định đc header
+        <div className='bg-white h-16 shadow-[0_0px_1px_1px_rgba(0,0,0,0.12)] fixed top-0 left-0 right-0 z-50'>
+            <div className="py-2.5 flex justify-between items-center align-center w-[935px] mx-auto">
                 <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/840px-Instagram_logo.svg.png' className='w-28' />
 
-                {/* <Tippy
+                <Tippy
                     interactive // seclect kết quả
                     // kết quả tìm kiếm > 0
-                    visible={searchResult.length > 0}
+                    // visible={searchResult.length > 0}
 
                     render={(attrs) => (
                         <div className='w-[350px]' tabIndex="-1" {...attrs}>
@@ -66,7 +67,7 @@ function Header() {
 
                         
                     </div>
-                </Tippy> */}
+                </Tippy>
 
                 <ul className='flex text-[#262626]'>
                     <li>
@@ -92,7 +93,7 @@ function Header() {
                         <Tippy
                             interactive // seclect kết quả
                             // kết quả tìm kiếm > 0
-                            visible={searchResult.length > 0}
+                            // visible={searchResult.length > 0}
 
                             render={(attrs) => (
                                 <div className='' tabIndex="-1" {...attrs}>
@@ -110,7 +111,7 @@ function Header() {
                             <Tippy
                                 interactive // seclect kết quả
                                 // kết quả tìm kiếm > 0
-                                visible={searchResult.length > 0}
+                                // visible={searchResult.length > 0}
 
                                 render={(attrs) => (
                                     <div className='' tabIndex="-1" {...attrs}>

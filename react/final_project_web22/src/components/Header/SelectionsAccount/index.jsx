@@ -1,4 +1,4 @@
-import { BiUserCircle,BiSave } from "react-icons/bi";
+import { BiUserCircle, BiBookmark } from "react-icons/bi";
 import { AiOutlineSetting } from "react-icons/ai";
 import { HiOutlineSwitchHorizontal } from "react-icons/hi";
 
@@ -11,7 +11,7 @@ function SelectionAccount() {
             </div>
 
             <div className='flex justify-start py-2 px-4 items-center'>
-                <BiSave className="w-4 h-4 mr-3" />
+                <BiBookmark className="w-4 h-4 mr-3" />
                 <p>Saved</p>
             </div>
 
