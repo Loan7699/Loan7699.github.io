@@ -32,10 +32,10 @@ const storyAccount = [
         name: 'yoorana'
     },
   
-    {
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYomQF3nKcpugHMjvDUPM1ftc5NiexOhSmxA&usqp=CAU",
-        name: 'yoorana'
-    },
+    // {
+    //     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYomQF3nKcpugHMjvDUPM1ftc5NiexOhSmxA&usqp=CAU",
+    //     name: 'yoorana'
+    // },
     // {
     //     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYomQF3nKcpugHMjvDUPM1ftc5NiexOhSmxA&usqp=CAU",
     //     name: 'yoorana'
@@ -57,8 +57,7 @@ function Reels() {
                 <img 
                     src={account.image}
                     className='w-[56px] h-[56px] rounded-full border-2 border-[#df3968]' />
-                <p className="text-xs max-w-[60px] text-center overflow-hidden">{account.name}</p>
-                
+                <p className="text-xs max-w-[60px] text-center overflow-hidden">{account.name}</p> 
             </div>
         )
     )

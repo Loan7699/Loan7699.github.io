@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
-import { useReducer, useState } from 'react'
+import { startTransition, useReducer, useState, useImperativeHandle } from 'react'
 
 
 // Ví dụ 1: tăng giảm số
@@ -59,6 +59,7 @@ function App() {
 }
 */
 
+/*
 // Ví dụ 2: 1 ô input, 1 btn thêm => thêm tên người dùng vào input cho vào 1 array
 
 // 1. init State
@@ -122,5 +123,58 @@ function App () {
     </div>
   )
 }
+*/
+
+// // 1. Initial state (kiểu DL nguyên thủy hoặc obj)
+// const initState = { count: 0 }
+
+// // 2. actions
+// const UP_ACTION = 'up'
+// const DOWN_ACTION = 'down'
+
+// // 3. reducer
+// const reducer = (state, action) => {
+//   console.log('reducer running ...');
+//   switch (action.type) {
+//     case UP_ACTION:
+//       return {
+//         ...state, // bảo toàn obj ban đầu
+//         count: state.count + 1 // cập nhật thay đổi
+//       }
+
+//     case DOWN_ACTION:
+//       return {
+//         ...state, // bảo toàn obj ban đầu
+//         count: state.count - 1 // cập nhật thay đổi
+//       }
+    
+//     default:
+//       break;
+//   }
+// }
+
+// function App () {
+//   const [state, dispatch] = useReducer(reducer, initState)
+
+//   const handleDecrease = () => {
+//     dispatch({type: DOWN_ACTION})
+//   }
+
+//   const handleIncrease = () => {
+//     dispatch({type: UP_ACTION})
+//   }
+
+//   return (
+//     <div>
+//       <h1>{state.count}</h1>
+//       <button onClick={handleIncrease}>+</button>
+//       <button onClick={handleDecrease}>-</button>
+//     </div>
+//   )
+// }
+
+// useImperativeHandle: giúp tùy chỉnh được ref của 1 Component
+// Ví dụ phát video
+
 
 export default App;
