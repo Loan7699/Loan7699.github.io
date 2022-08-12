@@ -107,7 +107,7 @@ function Content() {
 
 // 2. useEffect(callback, [])
 // - chỉ gọi callback 1 lần sau khi Component mounted, ko được gọi mỗi khi Component re-render
-/*
+
 function Content() {
     const [posts, setPosts] = useState([]);
 
@@ -130,18 +130,27 @@ function Content() {
         </div>
     )
 }
-*/
+
 
 // 3. useEffect(callback, [deps])
 // - Callback sẽ được gọi lại mỗi khi deps thay đổi: so sánh bằng toán tử ===
 // gọi call api lấy ra các DL khác nhau
 
+/*
 const tabs = ['posts', 'albums', 'todos'];
 
 function Content() {
     const [title, setTitle] = useState('');
     const [infos, setInfos] = useState([]);
     const [type, setType] = useState('posts');
+
+    // useEffect(() => {
+    //     fetch(`https://jsonplaceholder.typicode.com/${type}`)
+    //         .then(res => res.json())
+    //         .then(infos => {
+    //             setInfos(infos)
+    //         })
+    // }, [type])
 
     useEffect(() => {
         fetch(`https://jsonplaceholder.typicode.com/${type}`)
@@ -180,5 +189,6 @@ function Content() {
         </div>
     )
 }
+*/
 
 export default Content;

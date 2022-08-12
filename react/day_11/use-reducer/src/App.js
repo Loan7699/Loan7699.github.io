@@ -14,7 +14,7 @@ const INCREASE = 'INCREASE_ACTION'
 const DECREASE = 'DECREASE_ACTION'
 
 // reducer
-const countReducer = (state, action) => {  // state là 1 obj chứa các state đã khai báo
+const countReducer = (state, action) => {  // state là 1 obj chứa state hiện tại
   // action là 1 obj nhận từ dispatch
   switch (action.type) {
     case INCREASE:

@@ -31,7 +31,7 @@ function Header() {
         //  fixed top-0 right-0 left-0: chưa cố định đc header
         <div className='bg-white h-16 shadow-[0_0px_1px_1px_rgba(0,0,0,0.12)] fixed top-0 left-0 right-0 z-50'>
             <div className="py-2.5 flex justify-between items-center align-center w-[935px] mx-auto">
-                <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/840px-Instagram_logo.svg.png' className='w-28' />
+                <img src='/images/Instagram_logo.svg.png' className='w-28' />
 
                 <Tippy
                     interactive // seclect kết quả
