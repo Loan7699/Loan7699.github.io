@@ -10,7 +10,7 @@ import { HiHome } from "react-icons/hi";
 import { RiMessengerLine, RiSearchLine, RiCloseFill } from "react-icons/ri";
 import { FiPlusSquare, FiHeart, FiSearch } from "react-icons/fi";
 import { MdOutlineExplore } from "react-icons/md";
-import { AiFillCloseCircle } from "react-icons/ai";
+import { AiOutlineHome } from "react-icons/ai";
 
 import AccountItemResult from './Account_item_result';
 import SelectionAccount from './SelectionsAccount';
@@ -30,10 +30,10 @@ function Header() {
     return (
         //  fixed top-0 right-0 left-0: chưa cố định đc header
         <div className='bg-white h-16 shadow-[0_0px_1px_1px_rgba(0,0,0,0.12)] fixed top-0 left-0 right-0 z-50'>
-            <div className="py-2.5 flex justify-between items-center align-center w-[935px] mx-auto">
+            <div className="py-2.5 px-5 flex justify-between mx-auto items-center align-center width">
                 <img src='/images/Instagram_logo.svg.png' className='w-28' />
 
-                <Tippy
+                <Tippy className="hidden"
                     interactive // seclect kết quả
                     // kết quả tìm kiếm > 0
                     // visible={searchResult.length > 0}
@@ -52,7 +52,7 @@ function Header() {
                         </div>
                     )}
                 >
-                    <div className='flex justify-center items-center bg-[#F2F3F5] rounded-lg px-4 py-1 h-9'>
+                    <div className='lg:flex justify-center items-center bg-[#F2F3F5] rounded-lg px-4 py-1 h-9 hidden'>
                         <RiSearchLine className='text-[#8E8E8E] mr-3' />
                         <div>
                             <input
@@ -63,7 +63,7 @@ function Header() {
                             />
                         </div>
 
-                        <AiFillCloseCircle className='text-[#8E8E8E]' />
+                        <AiOutlineHome className='text-[#8E8E8E]' />
 
                         
                     </div>
@@ -107,7 +107,7 @@ function Header() {
                         </Tippy>
                     </li>
                     <li>
-                        <Link to="/about">
+                        
                             <Tippy
                                 interactive // seclect kết quả
                                 // kết quả tìm kiếm > 0
@@ -125,7 +125,7 @@ function Header() {
                                     <img src='https://i.pinimg.com/originals/a0/1d/55/a01d5552778440f9333bbffe57475ce5.jpg' alt='Chanyeol' className='w-6 h-6 rounded-full ml-[22px] border border-slate-300 hover:border-slate-900'></img>
                                 </div>
                             </Tippy>
-                        </Link>
+                        
                     </li>
                 </ul>
 

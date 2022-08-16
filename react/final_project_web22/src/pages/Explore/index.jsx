@@ -1,4 +1,8 @@
 import React from 'react'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
+import ExplorePage from '../../components/ExplorePage'
+
 import ProTypes from 'prop-types'
 Explore.ProTypes = {
 
@@ -7,7 +11,9 @@ Explore.ProTypes = {
 function Explore(props) {
     return (
         <div>
-            Explore
+            <Header />
+            <ExplorePage />
+            <Footer />
         </div>
     )
 }

@@ -41,3 +41,24 @@
 .example::-webkit-scrollbar {
   display: none;
 }
+
+.background-login {
+  background-position: -46px 0;
+}
+
+.width {
+  max-width: calc(935px + 40px);
+  width: 100%;
+}
+
+.max-width {
+  max-width: 935px;
+}
+
+.width-mess {
+  width: 300px;
+}
+
+.flex-basic {
+  flex-basis: auto;
+}

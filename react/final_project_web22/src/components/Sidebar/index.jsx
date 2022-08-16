@@ -4,7 +4,7 @@ import Footer from './Footer'
 
 function Sidebar () {
     return (
-        <div className="w-[293px] sticky top-24">
+        <div className="w-[293px] lg:block lg:sticky lg:top-24 hidden">
             <User />
             <Suggestions/>
             <Footer />

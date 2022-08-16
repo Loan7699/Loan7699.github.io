@@ -53,9 +53,9 @@ const storyAccount = [
 function Reels() {
     return (
         
-            storyAccount.map((account, index) => 
-            <div className=" mr-8">
-                <div key={account.index}
+            storyAccount.map((account, index) =>
+            <div className=" mr-8" key={index}>
+                <div key={index}
                     className="py-0 w-[56px]"
                 >
                     <img 

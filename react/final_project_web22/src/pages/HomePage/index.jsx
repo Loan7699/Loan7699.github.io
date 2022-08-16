@@ -4,6 +4,7 @@ import React from "react";
 import Header from "../../components/Header";
 import Content from "../../components/Content";
 import Sidebar from "../../components/Sidebar";
+import Footer from "../../components/Footer"
 
 HomePage.ProTypes = {};
 
@@ -17,9 +18,11 @@ function HomePage(props) {
             <div className="flex justify-between mx-auto mt-[64px] w-[935px]">
                     <Content />
                 <div className="relative">
-                    <Sidebar />
+                    <Sidebar className=""/>
                 </div>
             </div>
+
+            <Footer />
         </div>
     );
 }
