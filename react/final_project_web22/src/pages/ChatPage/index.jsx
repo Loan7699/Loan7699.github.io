@@ -11,9 +11,9 @@ ChatPage.ProTypes = {
 
 function ChatPage(props) {
     return (
-        <div className='w-full h-full bg-[#FAFAFA]'>
+        <div className='w-full h-full bg-[#FAFAFA] overflow-hidden'>
             <Header />
-            <div className='pt-16 md:pt-[74px]'>
+            <div className='mt-16 md:mt-[64px] md:pt-[10px]'>
                 <div className='flex bg-[#FFFFFF] mx-auto w-full h-full max-width relative border border-solid border-[#DBDBDB]'>
                     <MyMessages />
                     <NewMessage />

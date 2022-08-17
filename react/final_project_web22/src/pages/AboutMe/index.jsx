@@ -11,14 +11,16 @@ AboutMe.ProTypes = {
 
 function AboutMe(props) {
     return (
-        <div>
-            <div>
+        <div className='bg-[#FAFAFA] overflow-hidden'>
+            
                 <Header />
-            </div>
-            <MyProfile />
-            <div>
+            
+            
+                <MyProfile />
+            
+            
                 <Footer />
-            </div>
+            
         </div>
     )
 }

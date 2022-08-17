@@ -5,12 +5,13 @@ import Header from "../../components/Header";
 import Content from "../../components/Content";
 import Sidebar from "../../components/Sidebar";
 import Footer from "../../components/Footer"
+import PopupHome from "../../components/popup/PopupHome";
 
 HomePage.ProTypes = {};
 
 function HomePage(props) {
     return (
-        <div className="flex flex-col bg-[#FAFAFA]">
+        <div className="flex flex-col bg-[#FAFAFA] overflow-hidden">
             <div className="relative">
                 <Header />
             </div>
@@ -21,6 +22,8 @@ function HomePage(props) {
                     <Sidebar className=""/>
                 </div>
             </div>
+
+            {/* <PopupHome /> */}
 
             <Footer />
         </div>

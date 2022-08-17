@@ -4,13 +4,15 @@ import { BiMerge } from 'react-icons/bi'
 
 function MyProfile() {
     return (
-        <div className="mt-16 bg-[#FAFAFA] px-5 pt-6">
-            <div className="mx-4 pt-4 mb-6 flex">
-                <div className="mr-7 md:w-56 w-24 h-24">
-                    <img className="md:w-36 md:h-36 rounded-full" src="../my_profile/Loan.jpg" />
+        <div className="mt-16 bg-[#FAFAFA] md:px-5 md:pt-7 max-width mx-auto">
+            <div className="flex mx-4 pt-6 mb-6">
+                <div className="mr-7 basis-0 grow">
+                    <div className='w-20 h-20 md:w-36 md:h-36 mx-auto'>
+                        <img className="rounded-full border border-solid border-#DBDBDB" src="../my_profile/Loan.jpg" />
+                    </div>
                 </div>
 
-                <div>
+                <div className='flex-profile'>
                     <div className='md:flex md:mb-2'>
                         <div className='flex'>
                             <p className='text-[28px] font-extralight'>phuongloan99</p>
@@ -31,20 +33,20 @@ function MyProfile() {
 
                     </div>
 
-                    <ul className='py-3 hidden md:flex md:justify-between md:mb-2'>
-                        <li>
+                    <ul className='py-3 hidden md:flex md:justify-start md:mb-2'>
+                        <li className='mr-10'>
                             <div className='flex text-base'>
                                 <span className='font-semibold mr-2'>24</span>
                                 <span className=''>posts</span>
                             </div>
                         </li>
-                        <li>
+                        <li className='mr-10'>
                             <div className='flex'>
                                 <span className='font-semibold mr-2'>104</span>
                                 <span className=''>followers</span>
                             </div>
                         </li>
-                        <li>
+                        <li className='mr-10'>
                             <div className='flex'>
                                 <span className='font-semibold mr-2'>382</span>
                                 <span className=''>following</span>
@@ -57,6 +59,7 @@ function MyProfile() {
                     </div>
                 </div>
             </div>
+
 
             <div className="px-4 pb-[21px] text-left md:hidden">
                 <span className='text-sm font-bold'>Phương Loan</span>
@@ -91,67 +94,70 @@ function MyProfile() {
                 {/* <a href=''>
                     <BsCardList className='w-5 h-5' />
                 </a> */}
-                
-                    <a href="" className='flex mr-16'>
-                        <BsBookmark className='w-5 h-5 md:w-3 md:h-3 mt-[2px]' />
-                        <div className='uppercase hidden md:block text-[#8E8E8E] ml-1.5 text-xs font-semibold'>saved</div>
-                    </a>
-             
 
-                    <a href="" className='flex'>
-                        <MdOutlinePhotoCameraFront className='w-6 h-6 md:w-3 md:h-3 mt-[2px]' />
-                        <div className='uppercase hidden md:block text-[#8E8E8E] ml-1.5 text-xs font-semibold'>tagged</div>
-                    </a>
-        
+                <a href="" className='flex mr-16'>
+                    <BsBookmark className='w-5 h-5 md:w-3 md:h-3 mt-[2px]' />
+                    <div className='uppercase hidden md:block text-[#8E8E8E] ml-1.5 text-xs font-semibold'>saved</div>
+                </a>
+
+
+                <a href="" className='flex'>
+                    <MdOutlinePhotoCameraFront className='w-6 h-6 md:w-3 md:h-3 mt-[2px]' />
+                    <div className='uppercase hidden md:block text-[#8E8E8E] ml-1.5 text-xs font-semibold'>tagged</div>
+                </a>
+
 
             </div>
             <div className='flex flex-col'>
-                <div className='flex justify-center md:mb-7'>
-                    <div classname="shrink-0 grow basis-0">
-                        <a href=''>
-                            <div className='mr-[3px] md:mr-7'>
-                                <img src='/my_profile/post1.jpg' className='object-cover md:h-60 w-60'/>
+                <div className='flex md:mb-7 mb-1'>
+                    <div classname="w-full shrink-0 grow basis-0">
+                        {/*  flex-grow cho phép các phần tử giãn theo độ rộng của container. */}
+                        <a href='' className='cursor-pointer'>
+                            <div className='mr-[3px] md:mr-7 overflow-hidden'>
+                                <img src='/my_profile/post1.jpg' className='object-cover w-full h-full' />
                             </div>
                         </a>
                     </div>
-                    <div classname="shrink-0 grow basis-0">
-                        <a href='' className='relative'>
-                            <div className='mr-[3px] md:mr-7'>
-                                <img src='/my_profile/post2.jpg' className='object-cover md:h-60 w-60'/>
+                    <div classname="w-full shrink-0 grow basis-0">
+                        <a href='' className='relative cursor-pointer'>
+                            <div className='mr-[3px] md:mr-7 overflow-hidden'>
+                                <img src='/my_profile/post2.jpg' className='object-cover w-full h-full' />
                             </div>
-                            <BiMerge className='text-[#FFFFFF] relative top-[-275px] right-[-250px] text-2xl'/>
+                            <BiMerge className='text-[#FFFFFF] relative top-[-275px] right-[-250px] text-2xl' />
                         </a>
                     </div>
-                    <div  classname="shrink-0 grow basis-0">
-                        <a href=''>
-                            <img src='/my_profile/post3.jpg' className='object-cover md:h-60 w-60'/>
+                    <div classname="w-full shrink-0 grow basis-0">
+                        <a href='' className='cursor-pointer'>
+                            <div className='overflow-hidden'>
+                                <img src='/my_profile/post3.jpg' className='object-cover w-full h-full' />
+                            </div>
                         </a>
                     </div>
                 </div>
 
                 {/* chưa căm được ảnh */}
-                <div className='flex justify-center'>
+                <div className='flex'>
                     <div classname="">
                         <a href=''>
                             <div className='md:mr-7 mr-[3px]'>
-                                <img src='/my_profile/post4.jpg' className='object-cover md:h-60 w-60'/>
+                                <img src='/my_profile/post4.jpg' className='object-cover' />
                             </div>
-                            <BiMerge className='text-[#FFFFFF] relative top-2 right-2'/>
+                            <BiMerge className='text-[#FFFFFF] relative top-2 right-2' />
                         </a>
                     </div>
                     <div classname="">
                         <a href=''>
                             <div className='mr-[3px] md:mr-7'>
-                                <img src='/my_profile/post5.jpg' className='object-cover md:h-60 w-60'/>
+                                <img src='/my_profile/post5.jpg' className='object-cover' />
                             </div>
                         </a>
                     </div>
                     <div relative>
                         <a href=''>
                             <div>
-                                <img src='/my_profile/post6.jpg' className='object-cover md:h-60 w-60'/>
+                                <img src='/my_profile/post6.jpg' className='object-cover' />
                             </div>
-                            <BiMerge className='text-[#FFFFFF] relative top-2 right-2'/>
+                            <BiMerge className='text-[#FFFFFF] relative top-2 right-2' />
                         </a>
                     </div>
                 </div>

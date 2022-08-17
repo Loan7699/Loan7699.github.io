@@ -10,7 +10,7 @@ import { HiHome } from "react-icons/hi";
 import { RiMessengerLine, RiSearchLine, RiCloseFill } from "react-icons/ri";
 import { FiPlusSquare, FiHeart, FiSearch } from "react-icons/fi";
 import { MdOutlineExplore } from "react-icons/md";
-import { AiOutlineHome } from "react-icons/ai";
+import { AiFillCloseCircle, AiOutlineHome } from "react-icons/ai";
 
 import AccountItemResult from './Account_item_result';
 import SelectionAccount from './SelectionsAccount';
@@ -63,7 +63,7 @@ function Header() {
                             />
                         </div>
 
-                        <AiOutlineHome className='text-[#8E8E8E]' />
+                        <AiFillCloseCircle className='text-[#8E8E8E]' />
 
                         
                     </div>
@@ -72,7 +72,7 @@ function Header() {
                 <ul className='flex text-[#262626]'>
                     <li>
                         <Link to="/">
-                            <HiHome className='w-6 h-6 ml-[22px]' />
+                            <AiOutlineHome className='w-6 h-6 ml-[22px]' />
                         </Link>
                     </li>
                     <li>

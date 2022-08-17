@@ -62,3 +62,12 @@
 .flex-basic {
   flex-basis: auto;
 }
+
+.flex-profile {
+  flex-basis: 30px;
+  flex-grow: 2;
+}
+
+.min-height {
+  min-height: 48px;
+}
