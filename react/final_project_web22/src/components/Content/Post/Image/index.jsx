@@ -1,8 +1,8 @@
 
 function Image () {
     return (
-        <div className="cursor-pointer">
-            <img src="https://pbs.twimg.com/media/FWmjTMTUUAA-Pin?format=jpg&name=medium" alt="post-image"/>
+        <div className="cursor-pointer overflow-auto">
+            <img src="/status/img1.jpg" alt="post-image"/>
         </div>
     )
 }

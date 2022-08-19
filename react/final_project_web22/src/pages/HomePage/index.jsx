@@ -5,7 +5,6 @@ import Header from "../../components/Header";
 import Content from "../../components/Content";
 import Sidebar from "../../components/Sidebar";
 import Footer from "../../components/Footer"
-import PopupHome from "../../components/popup/PopupHome";
 
 HomePage.ProTypes = {};
 
@@ -16,9 +15,9 @@ function HomePage(props) {
                 <Header />
             </div>
 
-            <div className="flex justify-between mx-auto mt-[64px] w-[935px]">
+            <div className="flex justify-between mx-auto mt-[64px] w-[935px] relative">
                     <Content />
-                <div className="relative">
+                <div className="">
                     <Sidebar className=""/>
                 </div>
             </div>

@@ -29,14 +29,14 @@ function Header() {
 
     return (
         //  fixed top-0 right-0 left-0: chưa cố định đc header
-        <div className='bg-white h-16 shadow-[0_0px_1px_1px_rgba(0,0,0,0.12)] fixed top-0 left-0 right-0 z-50'>
+        <div className='bg-white h-16 shadow-[0_0px_1px_1px_rgba(0,0,0,0.12)] fixed top-0 left-0 right-0 z-50 overflow-hidden'>
             <div className="py-2.5 px-5 flex justify-between mx-auto items-center align-center width">
                 <img src='/images/Instagram_logo.svg.png' className='w-28' />
 
-                <Tippy className="hidden"
+                <Tippy className=""
                     interactive // seclect kết quả
                     // kết quả tìm kiếm > 0
-                    // visible={searchResult.length > 0}
+                    visible={searchResult.length > 0}
 
                     render={(attrs) => (
                         <div className='w-[350px]' tabIndex="-1" {...attrs}>
@@ -52,7 +52,7 @@ function Header() {
                         </div>
                     )}
                 >
-                    <div className='lg:flex justify-center items-center bg-[#F2F3F5] rounded-lg px-4 py-1 h-9 hidden'>
+                    <div className='md:flex justify-center items-center bg-[#F2F3F5] rounded-lg px-4 py-1 h-9 hidden'>
                         <RiSearchLine className='text-[#8E8E8E] mr-3' />
                         <div>
                             <input

@@ -4,7 +4,7 @@ import { FiSend } from "react-icons/fi"
 
 function NewMessage() {
     return (
-        <div className='h-auto my-auto grow shrink flex-basic'>
+        <div className='h-auto my-auto grow shrink flex-basic fixed top-1/3 left-1/2'>
             <div className='h-full p-6'>
                 <div className='w-24 h-24 border-2 border-solid border-[#333333] rounded-full relative mx-auto'>
                     <FiSend className='relative top-6 left-5 w-12 h-12' />

@@ -4,10 +4,9 @@ import { BsChevronDown, BsPencilSquare } from "react-icons/bs"
 
 function MyMessages() {
     return (
-        <div className='w-[19rem] lg:w-[21rem] border-r border-solid border-[#DBDBDB]'>
-            <div className='px-5 mt-3 flex items-center justify-between border-b border-solid border-[#DBDBDB] w-[19rem] lg:w-[21rem] h-16 fixed top-16 z-10'>
+        <div className='w-[19rem] lg:w-[21rem] border-r'>
+            <div className='px-5 flex mt-3 items-center justify-between border-b border-r border-solid border-[#DBDBDB] w-[19rem] lg:w-[21rem] h-16 fixed top-16 z-10 bg-[#FFFFFF]'>
                 <div className='flex bg-[#FFFFFF]'>
-                    
                     <div className='flex w-full'>
                         <div className='font-bold mr-2'>phuongloan99</div>
                         {/* dịch thẻ div ra giữa? */}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 SuggestProfile.propTypes = {
@@ -6,6 +6,14 @@ SuggestProfile.propTypes = {
 };
 
 function SuggestProfile(props) {
+
+    const [statusFollow, setStatusFollow] = useState('Follow')
+    const [colortText, setColorText] = useState('#0095F6')
+    const handleFl = () => {
+        setStatusFollow('Following')
+        setColorText('#333333')
+    }
+
     return (
         <div className='flex justify-between text-sm py-2 items-center'>
             <div className='flex items-center'>
@@ -20,7 +28,7 @@ function SuggestProfile(props) {
                 </div>
             </div>
 
-            <div className='text-[#0095F6] cursor-pointer font-semibold'>Follow</div>
+            <div className='cursor-pointer font-semibold' style={{color:colortText}} onClick={handleFl}>{statusFollow}</div>
         </div>
     );
 }
