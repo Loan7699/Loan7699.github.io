@@ -27,7 +27,7 @@ let shuffle = function(array) {
         array[i] = array[j];
         array[j] = temp;
         // sử dụng destructuring ES6
-        [arr[i], ar[j]] = [arr[i], ar[j]]
+        // [arr[i], ar[j]] = [arr[i], ar[j]]
     }
     return array;
 }

@@ -1,4 +1,5 @@
 import React from "react";
+
 // import ProTypes from 'prop-types'
 
 import Header from "../../components/Header";
@@ -9,6 +10,7 @@ import Footer from "../../components/Footer"
 HomePage.ProTypes = {};
 
 function HomePage(props) {
+
     return (
         <div className="flex flex-col bg-[#FAFAFA] overflow-hidden">
             <div className="relative">

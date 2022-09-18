@@ -7,6 +7,7 @@ import Explore from './pages/Explore';
 import LoginLogout from './pages/LoginLogout';
 
 import './App.css';
+import DetailUser from './pages/DetailUser';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/about" element={<AboutMe />} />
         <Route path="/chat" element={<ChatPage />} />
         <Route path="/explore" element={<Explore />} />
+        <Route path="/detail" element={<DetailUser />} />
       </Routes>
     </div>
   );

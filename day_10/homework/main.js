@@ -107,4 +107,3 @@ function temperature(T) {
     return nhietDoF
 }
 console.log(temperature(50))
-

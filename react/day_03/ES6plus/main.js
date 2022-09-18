@@ -81,7 +81,7 @@ function logger1(log) {
 
 logger1('Message1');
 
-// Hàm expression function
+// Hàm expression function (có thể gán cho biến, truyền vào làm tham số cho 1 hàm khác, có thể được trả về từ function khác)
 const logger2 = function(log) {
     console.log(log);
 }

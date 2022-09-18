@@ -24,23 +24,23 @@ function randomId() {
     return Math.floor(Math.random() * 1000000);
 }
 
-let todos;
-    // {
-    //     id: randomId(),
-    //     title: "play soccer",
-    //     status: false,
-    // },
-    // {
-    //     id: randomId(),
-    //     title: "do my homework",
-    //     status: true,
-    // },
-    // {
-    //     id: randomId(),
-    //     title: "go to school",
-    //     status: true,
-    // },
-
+let todos = [
+    {
+        id: randomId(),
+        title: "play soccer",
+        status: false,
+    },
+    {
+        id: randomId(),
+        title: "do my homework",
+        status: true,
+    },
+    {
+        id: randomId(),
+        title: "go to school",
+        status: true,
+    },
+]
 
 // Truy cập
 const todoList = document.querySelector(".todo-list");

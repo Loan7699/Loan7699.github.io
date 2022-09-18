@@ -32,12 +32,12 @@ function LoginLogout(props) {
                                 <div className='mt-6'>
                                     <div className='mb-1.5 mx-10 text-xs'>
                                         <div className='h-9 py-2 border border-solid border-[#DBDBDB] rounded-[3px] bg-[#FAFAFA]'>
-                                            <input type='text' placeholder='Phone number, username or email' className='pl-2 w-64 bg-[#FAFAFA]' />
+                                            <input type='text' placeholder='Phone number, username or email' className='pl-2 w-64 bg-[#FAFAFA] outline-none' />
                                         </div>
                                     </div>
                                     <div className='mb-3 mx-10 text-xs'>
                                         <div className='h-9 py-2 border border-solid border-[#DBDBDB] rounded-[3px] bg-[#FAFAFA]'>
-                                            <input type='password' placeholder='Password' className='pl-2 w-64 bg-[#FAFAFA]' />
+                                            <input type='password' placeholder='Password' className='pl-2 w-64 bg-[#FAFAFA] outline-none' />
                                         </div>
                                     </div>
                                     <div className='my-2 mx-10 text-sm'>

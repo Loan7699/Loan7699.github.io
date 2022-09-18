@@ -4,9 +4,9 @@ import { useState } from "react"
 
 function Actions() {
 
-    const [colorHeart, setColorHeart] = useState()
+    const [colorHeart, setColorHeart] = useState('black')
     const handLiked = () => {
-        setColorHeart('red')
+        setColorHeart(colorHeart === 'black' ? 'red' : 'black')
     }
 
     return (

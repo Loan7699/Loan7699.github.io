@@ -1,6 +1,6 @@
 /* 1. Callback()
 - Là hàm
-- Được truyền qua đối số
+- Được truyền làm tham số cho 1 hàm khác
 - được gọi lại trong hàm nhận đối số
 */
 function myCallback(value) {

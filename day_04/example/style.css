@@ -12,7 +12,7 @@
 }
 
 .item {
-    width: 100px;
+    /* width: 100px; */
     height: 100px;
     background-color: blue;
     color: white;
@@ -26,24 +26,26 @@
 }
 .item4 {
     order: 0;
-    flex-basis: 300px;
+    /* flex-basis: 300px; */
     /* kích thước trục item flex_basis phụ thuộc vào trục main row or column */
+    flex-grow: 4;
 }
 .item2 {
     order: 1;
-    /* flex-grow: 2; */
+    flex-grow: 2;
     /* flex_grow, chiếm khoảng thừa còn lại */
     flex-shrink: 3;
 
 }
 .item3 {
     order: 2;
-    /* flex-grow: 1; */
-    align-self: ;
+    flex-grow: 3;
+    /* align-self: ; */
    
 }
 .item1 {
     order: 3;
-    flex-basis: 600px;
-    flex-shrink: 5;
+    /* flex-basis: 600px; */
+    flex-shrink: 2;
+    flex-grow: 1;
 }

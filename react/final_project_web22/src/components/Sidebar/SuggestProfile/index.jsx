@@ -8,7 +8,7 @@ SuggestProfile.propTypes = {
 function SuggestProfile(props) {
 
     const [statusFollow, setStatusFollow] = useState('Follow')
-    const [colortText, setColorText] = useState('#0095F6')
+    const [colorText, setColorText] = useState('#0095F6')
     const handleFl = () => {
         setStatusFollow('Following')
         setColorText('#333333')
@@ -18,7 +18,7 @@ function SuggestProfile(props) {
         <div className='flex justify-between text-sm py-2 items-center'>
             <div className='flex items-center'>
                 <div className='cursor-pointer'>
-                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp4F1W6p4Y_rZvcKOSdD34lbKl5nTJUZbi1A&usqp=CAU' alt='avatar' className='w-8 h-8 rounded-full text-[#0095F6] cursor-pointer font-semibold mr-3'/>
+                    <img src='suggestProfile/images.jpg' alt='avatar' className='w-8 h-8 rounded-full text-[#0095F6] cursor-pointer font-semibold mr-3'/>
                     {/* {../../../img/images.jpeg} */}
                 </div>
 
@@ -28,7 +28,7 @@ function SuggestProfile(props) {
                 </div>
             </div>
 
-            <div className='cursor-pointer font-semibold' style={{color:colortText}} onClick={handleFl}>{statusFollow}</div>
+            <div className='cursor-pointer font-semibold' style={{color:colorText}} onClick={handleFl}>{statusFollow}</div>
         </div>
     );
 }
